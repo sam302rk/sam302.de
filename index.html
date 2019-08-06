@@ -1,0 +1,105 @@
+<html>
+<header>
+
+    <title>Home - GamingCraft_hd</title>
+
+    <link rel="stylesheet" href="css/sidenav.css">
+    <meta charset="utf-8" />
+    <link rel="icon" href="src/images/favicon/favicon.ico" type="image/ico" sizes="32x32">
+    <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+    <link rel="stylesheet" href="css/font.css">
+
+    <script>
+        var allPages = [
+            "home",
+            "gaming",
+            "blockvillage",
+            "gamingsoft",
+            "musichome",
+            "h0mb",
+            "5zgb",
+        ]
+
+        function dropDown(id) {
+            var obj = document.getElementById(id);
+            obj.hidden = !obj.hidden;
+        }
+
+        function onClickEvent(id, id2) {
+            /* id = itself, id2 = page */
+            for (var i = 0; i != allPages.length; i++) {
+                document.getElementById(allPages[i]).hidden = "true";
+            }
+            document.getElementById(id2).hidden = false;
+        }
+
+    </script>
+
+    <img src="src/images/favicon/favicon.png" style="width: 10%; left: 75px; top: 20%; position: fixed;">
+
+    <div class="sidenav">
+        <a href="#home" id="home1" onclick="onClickEvent('home1', 'home');">Home</a>
+        <a href="#gaming" id="gaming1" onclick="onClickEvent('gaming1', 'gaming');">Gaming</a>
+        <a onclick="dropDown('drop-1');">Coding</a>
+
+        <div hidden id="drop-1">
+            <a href="#blockvillage" id="blockvillage1" onclick="onClickEvent('blockvillage1', 'blockvillage');">╚ BlockVillage.net</a>
+            <a href="#gamingsoft" id="gamingsoft1" onclick="onClickEvent('gamingsoft1', 'gamingsoft');">╚ Team GamingSoft</a>
+        </div>
+
+        <a onclick="dropDown('drop-2');">Design</a>
+
+        <div hidden id="drop-2">
+            <a href="#musichome" id="musichome1" onclick="onClickEvent('musichome1', 'musichome');">╚ MusicHome.org</a>
+        </div>
+
+        <div hidden id="modellbau">
+            <a href="#">Modellbau</a>
+            <div hidden id="drop-3">
+                <a href="#h0mb">╚ H0 Modellbahn</a>
+                <a href="#5zgb">╚ 5" Gartenbahn</a>
+            </div>
+        </div>
+
+    </div>
+
+
+
+</header>
+
+<body background="src/images/background.png" onload="onClickEvent('home1', 'home');">
+    <center>
+        <div>
+            <div id="home" hidden="true">
+                <p>Willkommen auf meiner Webseite.</p>
+            </div>
+
+            <div id="gaming" hidden>
+
+            </div>
+
+            <div id="blockvillage" hidden>
+
+            </div>
+
+            <div id="gamingsoft" hidden>
+
+            </div>
+
+            <div id="musichome" hidden>
+
+            </div>
+
+            <div id="h0mb" hidden>
+
+            </div>
+
+            <div id="5zgb" hidden>
+
+            </div>
+        </div>
+    </center>
+
+</body>
+
+</html>
