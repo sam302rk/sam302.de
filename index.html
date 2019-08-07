@@ -33,6 +33,17 @@
             document.getElementById(id2).hidden = false;
         }
 
+        function onStartEvent() {
+            onClickEvent('home1', 'home');
+            document.getElementById("welcome").textContent = "                   " + document.getElementById("welcome").textContent;
+            //document.getElementById("welcome").textContent = "                     " + document.getElementById("welcome").textContent;
+            //document.getElementById("welcome").textContent = "                     " + document.getElementById("welcome").textContent;
+            //document.getElementById("welcome").textContent = "                     " + document.getElementById("welcome").textContent;
+        }
+
+        function linkOpenEvent(url) {
+            window.open(url, _blank);
+        }
     </script>
 
     <img src="src/images/favicon/favicon.png" style="width: 10%; left: 75px; top: 20%; position: fixed;">
@@ -67,11 +78,21 @@
 
 </header>
 
-<body background="src/images/background.png" onload="onClickEvent('home1', 'home');">
+<body background="src/images/background.png" onload="onStartEvent();">
     <center>
         <div>
             <div id="home" hidden="true">
-                <p>Willkommen auf meiner Webseite.</p>
+                <div> </div>
+                <p style="font-size: 75px" id="welcome">Willkommen auf meiner Webseite.</p>
+                <div style="padding-top: 175px">
+                    <a href="https://www.youtube.com/channel/UCBkWbZFNBOrb7pc9wmIywDw" target="_blank"><img src="src/images/socials/youtube.png" style="width: 3%; padding-left: 400px; padding-right: 50px;"></a>
+                    <a href="https://www.twitter.com/gamingcraft001" target="_blank"><img src="src/images/socials/twitter.png" style="width: 3%; padding-right: 50px;"></a>
+                    <a href="https://www.instagram.com/gamingcraft001" target="_blank"><img src="src/images/socials/instagram.png" style="width: 3%; padding-right: 50px;"></a>
+                    <a href="https://www.reddit.com/u/gamingcraft_hd" target="_blank"><img src="src/images/socials/reddit.png" style="width: 3%; padding-right: 50px;"></a>
+                    <a href="https://open.spotify.com/user/kvv123456789?si=CUAYKh5vS9SO1IPbh_w4eQ" target="_blank"><img src="src/images/socials/spotify.png" style="width: 3%; padding-right: 50px;"></a>
+                    <a href="https://soundcloud.com/gamingcraft_hd" target="_blank"><img src="src/images/socials/soundcloud.png" style="width: 3%; padding-right: 50px;"></a>
+                    <a href="https://github.com/GamingCrafthd" target="_blank"><img src="src/images/socials/github.png" style="width: 3%; padding-right: 50px;"></a>
+                </div>
             </div>
 
             <div id="gaming" hidden>
@@ -100,6 +121,4 @@
         </div>
     </center>
 
-</body>
-
-</html>
+</body></html>
