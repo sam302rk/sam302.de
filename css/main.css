@@ -1,0 +1,9 @@
+.background {
+    background-image: url(./../images/background.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+.socials {
+    margin-top: 2.5%;
+}
