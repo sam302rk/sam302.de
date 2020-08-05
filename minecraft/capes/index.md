@@ -1,5 +1,6 @@
 # Capes Folder
 This Folder includes the capes of
-- me (GamingCraft_hd)
-- marioboss56<br>
+- [GamingCraft_hd](./GamingCraft_hd.png)
+- [marioboss56](./marioboss56.png)
+
 and soon more.
