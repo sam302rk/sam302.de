@@ -1,1 +1,1 @@
-Creative:/gamemode creative:0;Survival:/gamemode survival:0;Spectator:/gamemode spectator:0;GodMode:/god:0;Heal:/heal:0
+Creative:/gamemode creative:71;Survival:/gamemode survival:72;Spectator:/gamemode spectator:73;GodMode:/god:75;Heal:/heal:76
