@@ -1,1 +1,1 @@
-Hub:/hub;GG:gg
+Hub:/hub:45;GG:gg:35
