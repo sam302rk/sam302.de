@@ -1,0 +1,1 @@
+GG:gg;Hub:/hub;Lobby:/lobby;EnderChest:/enderchest;Craft:/craft;PortalHub:/visit portalhub
