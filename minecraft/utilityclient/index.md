@@ -2,6 +2,7 @@
 Copyright (c) GamingCraft_hd 2020
 
 Download:
-- [1.0](https://GamingCrafthd.github.io/minecraft/utilityclient/UtilityClient-1.0.rar)
+- [1.0](./UtilityClient-1.0.rar) (RAR File-format requires WinRAR)
+- [1.1](./UtilityClient-1.1.zip)
 
-(WinRAR needed.)
+Thanks to marioboss56 and Hexer for their feedback.
