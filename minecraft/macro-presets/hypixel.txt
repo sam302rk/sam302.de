@@ -1,1 +1,0 @@
-GG:gg:45;Hub:/hub:44;Lobby:/lobby:45;EnderChest:/enderchest:71;Craft:/craft:72;PortalHub:/visit portalhub:54
