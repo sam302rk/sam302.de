@@ -1,0 +1,11 @@
+* {
+    --primary-1: #E38053;
+    --primary-2: #8E0525;
+    --uc-1: #E34B60;
+    --uc-2: #9A3F69;
+}
+
+body {
+    background-image: linear-gradient(180deg, #a20020 0%, #FC7A57);
+    height: 100vh;
+}
