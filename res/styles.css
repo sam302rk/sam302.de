@@ -19,6 +19,7 @@ body {
     width: 100%;
     margin: 0;
     scroll-behavior: smooth;
+    overflow-x: hidden;
 }
 
 h1 {
@@ -26,10 +27,6 @@ h1 {
     font-size: 96px;
     color: var(--font-color-1);
     text-align: center;
-}
-
-.h1-thin {
-    font-family: 'Roboto Light', Arial, Helvetica, sans-serif;
 }
 
 h2 {
@@ -87,8 +84,14 @@ a {
 }
 
 .page {
-    width: 99vw;
+    width: 100vw;
     height: 100vh;
+}
+
+.footer {
+    width: 100vw;
+    height: 172px;
+    background-color: var(--font-color-1);
 }
 
 .projects {
@@ -164,4 +167,18 @@ img {
     font-size: 180px;
     margin-left: 111px;
     margin-right: 111px;
+}
+
+.footer-header {
+    font-size: 42px;
+    color: var(--font-color-2);
+    margin-top: 34px;
+}
+
+.thin {
+    font-family: 'Roboto Thin', Arial, Helvetica, sans-serif;
+}
+
+.light {
+    font-family: 'Roboto Light', Arial, Helvetica, sans-serif;
 }
