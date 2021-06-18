@@ -56,10 +56,18 @@ em {
 
 em:hover {
     color: var(--font-color-1-hover);
-    margin-top: -10px;
 }
 
 em:active {
+    color: var(--font-color-1-active);
+}
+
+em.down:hover {
+    color: var(--font-color-1-hover);
+    margin-top: -10px;
+}
+
+em.down:active {
     color: var(--font-color-1-active);
     margin-top: 10px;
     opacity: 0%;
@@ -101,9 +109,9 @@ a {
 }
 
 p {
+    color: var(--font-color-1);
     font-family: 'Roboto Medium', Arial, Helvetica, sans-serif;
     font-size: 30px;
-    color: var(--font-color-2);
 }
 
 button {
@@ -141,9 +149,19 @@ img {
     vertical-align: middle;
 }
 
-p.prjk {
+.project-text {
     font-size: 28px;
     margin-left: 48px;
     margin-right: 48px;
+    color: var(--font-color-2);
+}
+
+.center-text {
     text-align: center;
+}
+
+.contact-icon {
+    font-size: 180px;
+    margin-left: 111px;
+    margin-right: 111px;
 }
