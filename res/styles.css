@@ -10,9 +10,10 @@
 
 body {
     background-image: linear-gradient(180deg, #a20020 0%, #FC7A57);
-    height: 100vh;
+    height: 300vh;
     width: 100%;
     margin: 0;
+    scroll-behavior: smooth;
 }
 
 h1 {
@@ -26,18 +27,24 @@ h1 {
     font-family: 'Roboto Light', Arial, Helvetica, sans-serif;
 }
 
-.center-xy {
+.absolute {
     position: absolute;
+    transform: translate(-50%, -50%);
+}
+
+.center-xy {
     left: 50%;
     top: 50%;
-    transform: translate(-50%, -50%);
 }
 
 em {
     color: var(--font-color-1);
+    font-size: 60px;
+}
+
+em.socials {
     margin-left: 30px;
     margin-right: 30px;
-    font-size: 60px;
 }
 
 p,
@@ -46,4 +53,9 @@ h1,
 h2,
 a {
     text-shadow: var(--shadow-1);
+}
+
+#projects {
+    width: 99vw;
+    height: 100vh;
 }
