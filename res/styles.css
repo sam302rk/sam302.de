@@ -3,9 +3,47 @@
     --primary-2: #8E0525;
     --uc-1: #E34B60;
     --uc-2: #9A3F69;
+    --font-color-1: #F8F8F8;
+    --font-color-2: #fff;
+    --shadow-1: 0px 4px 4px #00000040;
 }
 
 body {
     background-image: linear-gradient(180deg, #a20020 0%, #FC7A57);
     height: 100vh;
+    width: 100%;
+    margin: 0;
+}
+
+h1 {
+    font-family: 'Roboto Medium', Arial, Helvetica, sans-serif;
+    font-size: 96px;
+    color: var(--font-color-1);
+    text-align: center;
+}
+
+.h1-thin {
+    font-family: 'Roboto Light', Arial, Helvetica, sans-serif;
+}
+
+.center-xy {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+em {
+    color: var(--font-color-1);
+    margin-left: 30px;
+    margin-right: 30px;
+    font-size: 60px;
+}
+
+p,
+em,
+h1,
+h2,
+a {
+    text-shadow: var(--shadow-1);
 }
