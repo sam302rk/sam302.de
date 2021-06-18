@@ -55,7 +55,7 @@ a {
     text-shadow: var(--shadow-1);
 }
 
-#projects {
+.page {
     width: 99vw;
     height: 100vh;
 }
