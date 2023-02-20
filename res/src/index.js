@@ -12,7 +12,11 @@ const constants = {
     'name': my_name,
     'lname': my_name.toLowerCase(),
     'pronouns': my_pronouns,
+    'year': new Date().getFullYear()
 }
+
+document.getElementById('pic').src = `/res/img/${constants.lname}.png`
+if (constants.pronouns.startsWith('she')) document.getElementById('pic').classList.add('trans')
 
 document.title = `${my_name}302`
 

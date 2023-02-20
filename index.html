@@ -12,21 +12,45 @@
 </head>
 
 <body>
-    <div class="container">
-        <div class="window" id="whoami">
-            <p>$ <a href="whoami">whoami</a></p>
-            <p class="const">Hello! I'm <span class="hello">%name%</span>. <span class="pronouns">(%pronouns%)</span></p>
+    <div class="window" id="whoami">
+        <div class="inline-block">
+            <p>$ whoami</p>
+            <p class="const">Hello! I'm <a class="hello">%name%</a>. <span class="pronouns">(%pronouns%)</span></p>
         </div>
+        <img class="pic desktop" align="right" alt="my current profile picture" id="pic">
+    </div>
 
-        <div class="window" id="projects">
-            <p>$ exa -l <a href="#projects">projects</a></p>
-            <p class="const">
-                .rwxr-xr-x 001 %lname% <a href="">UtilityClient</a><br>
-                .rwxr-xr-x 002 %lname% <a href="">Westlingen</a><br>
-                .rwxr-xr-x 003 %lname% <a href="">trip-render</a><br>
-                .rwxr-xr-x 004 %lname% <a href="">PrototypeMod</a><br>
-            </p>
-        </div>
+    <div class="window" id="projects">
+        <p>$ exa -l <a href="#projects">projects</a>/</p>
+        <p class="const desktop">
+            .rwxr-xr-x 001 %lname% <a href="https://uc.gamingcraft.de/">UtilityClient</a><br>
+            .rwxr-xr-x 002 %lname% <a href="https://www.lotus-simulator.de/forum/index.php?thread/7345-westlingen">Westlingen</a><br>
+            .rwxr-xr-x 003 %lname% <a href="https://github.com/samuel-302/trip-render">trip-render</a><br>
+            .rwxr-xr-x 004 %lname% <a href="https://github.com/samuel-302/prototypemod">PrototypeMod</a>
+        </p>
+        <p class="const mobile">
+            <a href="https://uc.gamingcraft.de/">UtilityClient</a><br>
+            <a href="https://www.lotus-simulator.de/forum/index.php?thread/7345-westlingen">Westlingen</a><br>
+            <a href="https://github.com/samuel-302/trip-render">trip-render</a><br>
+            <a href="https://github.com/samuel-302/prototypemod">PrototypeMod</a>
+        </p>
+    </div>
+
+    <div class="window" id="contact">
+        <p class="desktop">$ firefox <a href="mailto://samuel@gamingcraft.de">mailto://samuel@gamingcraft.de</a></p>
+        <p class="mobile"><a href="mailto://samuel@gamingcraft.de">Contact me</a></p>
+        <p class="const comment">
+            // I'm also on <a href="https://www.github.com/samuel-302">GitHub</a>,
+            <a href="https://www.instagram.com/sam302rk">Instagram</a> &
+            <a href="https://www.twitter.com/gamingcraft001">Twitter</a>!
+        </p>
+    </div>
+
+    <div class="window" id="footer">
+        <p>$ cat footer.txt</p>
+        <p class="const">
+            Copyright (c) 2023-%year% %name% - <a href="#whoami">jump to the top</a>
+        </p>
     </div>
 
     <script src="res/src/logger.js"></script>

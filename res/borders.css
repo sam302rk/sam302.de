@@ -1,15 +1,5 @@
 .pride {
-    box-shadow:
-      0 0 0 2px var(--ctp-mocha-mauve),
-      0 0 0 4px var(--ctp-mocha-blue),
-      0 0 0 6px var(--ctp-mocha-green),
-      0 0 0 8px var(--ctp-mocha-yellow),
-      0 0 0 10px var(--ctp-mocha-peach),
-      0 0 0 12px var(--ctp-mocha-red);
-}
-
-.pride:hover {
-    transition: box-shadow .3s;
+    transition: all .2s;
     box-shadow:
         0 0 0 3px var(--ctp-mocha-mauve),
         0 0 0 6px var(--ctp-mocha-blue),
@@ -19,28 +9,19 @@
         0 0 0 18px var(--ctp-mocha-red);
 }
 
-.pride:active {
-    transition: box-shadow .5s;
+.pride:hover {
+    transition: all .2s;
     box-shadow:
-      0 0 0 1px var(--ctp-mocha-mauve),
-      0 0 0 2px var(--ctp-mocha-blue),
-      0 0 0 3px var(--ctp-mocha-green),
-      0 0 0 4px var(--ctp-mocha-yellow),
-      0 0 0 5px var(--ctp-mocha-peach),
-      0 0 0 6px var(--ctp-mocha-red);
+        0 0 0 4px var(--ctp-mocha-mauve),
+        0 0 0 8px var(--ctp-mocha-blue),
+        0 0 0 12px var(--ctp-mocha-green),
+        0 0 0 16px var(--ctp-mocha-yellow),
+        0 0 0 20px var(--ctp-mocha-peach),
+        0 0 0 24px var(--ctp-mocha-red);
 }
 
 .trans {
-    box-shadow:
-      0 0 0 2px var(--ctp-mocha-lavender),
-      0 0 0 4px var(--ctp-mocha-pink),
-      0 0 0 6px var(--ctp-mocha-rosewater),
-      0 0 0 8px var(--ctp-mocha-pink),
-      0 0 0 10px var(--ctp-mocha-lavender);
-}
-
-.trans:hover {
-    transition: box-shadow .3s;
+    transition: all .2s;
     box-shadow:
       0 0 0 3px var(--ctp-mocha-lavender),
       0 0 0 6px var(--ctp-mocha-pink),
@@ -49,12 +30,12 @@
       0 0 0 15px var(--ctp-mocha-lavender);
 }
 
-.trans:active {
-    transition: box-shadow .5s;
+.trans:hover {
+    transition: all .2s;
     box-shadow:
-      0 0 0 1px var(--ctp-mocha-lavender),
-      0 0 0 2px var(--ctp-mocha-pink),
-      0 0 0 3px var(--ctp-mocha-rosewater),
-      0 0 0 4px var(--ctp-mocha-pink),
-      0 0 0 5px var(--ctp-mocha-lavender);
-  }
+      0 0 0 4px var(--ctp-mocha-lavender),
+      0 0 0 8px var(--ctp-mocha-pink),
+      0 0 0 12px var(--ctp-mocha-rosewater),
+      0 0 0 16px var(--ctp-mocha-pink),
+      0 0 0 20px var(--ctp-mocha-lavender);
+}
