@@ -15,6 +15,8 @@ const constants = {
     'year': new Date().getFullYear()
 }
 
+if (params.debug != 'true') logger.debug('Debug mode disabled! Enable with "debug=true".')
+
 document.getElementById('pic').src = `/res/img/${constants.lname}.png`
 if (constants.pronouns.startsWith('she')) document.getElementById('pic').classList.add('trans')
 
