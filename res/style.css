@@ -16,7 +16,8 @@ body {
 .window {
     background: var(--ctp-mocha-base);
     max-width: 1000px;
-    width: calc(100vw - 4em); /* 2em for margin & 2em for padding */
+    width: calc(100vw - 4em);
+    /* 2em for margin & 2em for padding */
 
     font-size: 32px;
     margin: 1em auto;
@@ -51,7 +52,7 @@ a:active {
     transition: all .2s;
 }
 
-.hello:hover ~ .pronouns {
+.hello:hover~.pronouns {
     color: var(--ctp-mocha-lavender);
     transition: all .2s;
 }
@@ -96,7 +97,7 @@ a:active {
         background-color: var(--ctp-latte-surface0);
     }
 
-    .hello:hover ~ .pronouns {
+    .hello:hover~.pronouns {
         color: var(--ctp-latte-lavender);
     }
 
@@ -104,11 +105,11 @@ a:active {
         color: var(--ctp-latte-text);
         border-bottom: 1px dashed var(--ctp-latte-text);
     }
-    
+
     a:hover {
         border-bottom: 1px solid var(--ctp-latte-text);
     }
-    
+
     a:active {
         border-bottom: 1px solid var(--ctp-latte-text);
     }
