@@ -47,6 +47,21 @@ a:active {
     border-bottom: 1px solid var(--ctp-mocha-text);
 }
 
+.disabled {
+    pointer-events: none;
+    border-color: var(--ctp-mocha-overlay0);
+}
+
+.disabled:hover {
+    pointer-events: none;
+    border-color: var(--ctp-mocha-overlay0);
+}
+
+.disabled:active {
+    pointer-events: none;
+    border-color: var(--ctp-mocha-overlay0);
+}
+
 .pronouns {
     color: transparent;
     transition: all .2s;
