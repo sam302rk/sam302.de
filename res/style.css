@@ -1,0 +1,144 @@
+@import url('https://unpkg.com/@catppuccin/palette/css/catppuccin.css');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: var(--ctp-mocha-crust);
+    color: var(--ctp-mocha-text);
+    font-family: 'FiraCode Nerd Font Mono', 'Roboto Mono', monospace;
+    overflow-x: hidden;
+    margin: 0 0;
+}
+
+.window {
+    background: var(--ctp-mocha-base);
+    max-width: 1000px;
+    width: calc(100vw - 4em);
+    /* 2em for margin & 2em for padding */
+
+    font-size: 32px;
+    margin: 1em auto;
+    padding: 1em 1em;
+
+    border-radius: .5em;
+    box-shadow: 0px 2em 0px 0px var(--ctp-mocha-mantle);
+}
+
+.window:last-of-type {
+    box-shadow: none;
+}
+
+a {
+    color: var(--ctp-mocha-text);
+    text-decoration: none;
+    border-bottom: 1px dashed var(--ctp-mocha-text);
+}
+
+a:hover {
+    text-decoration: none;
+    border-bottom: 1px solid var(--ctp-mocha-text);
+}
+
+a:active {
+    text-decoration: none;
+    border-bottom: 1px solid var(--ctp-mocha-text);
+}
+
+.pronouns {
+    color: transparent;
+    transition: all .2s;
+}
+
+.hello:hover~.pronouns {
+    color: var(--ctp-mocha-lavender);
+    transition: all .2s;
+}
+
+.comment {
+    color: var(--ctp-mocha-surface2);
+}
+
+.pic {
+    width: 120px;
+    background-color: var(--ctp-mocha-surface0);
+    border-radius: 60px;
+    transition: all .2s;
+    cursor: pointer;
+}
+
+.pic:hover {
+    border-radius: 30px;
+    transition: all .2s;
+}
+
+.inline-block {
+    display: inline-block;
+}
+
+.mobile {
+    display: none;
+    visibility: hidden;
+}
+
+@media (prefers-color-scheme: light) {
+    body {
+        background: var(--ctp-latte-crust);
+        color: var(--ctp-latte-text);
+    }
+
+    .comment {
+        color: var(--ctp-latte-surface2);
+    }
+
+    .pic {
+        background-color: var(--ctp-latte-surface0);
+    }
+
+    .hello:hover~.pronouns {
+        color: var(--ctp-latte-lavender);
+    }
+
+    a {
+        color: var(--ctp-latte-text);
+        border-bottom: 1px dashed var(--ctp-latte-text);
+    }
+
+    a:hover {
+        border-bottom: 1px solid var(--ctp-latte-text);
+    }
+
+    a:active {
+        border-bottom: 1px solid var(--ctp-latte-text);
+    }
+
+    .window {
+        background: var(--ctp-latte-base);
+        box-shadow: 0px 2em 0px 0px var(--ctp-latte-mantle);
+    }
+}
+
+@media only screen and (max-width: 820px) {
+    .mobile {
+        display: unset;
+        visibility: unset;
+    }
+
+    .desktop {
+        display: none;
+        visibility: hidden;
+    }
+
+    .pronouns {
+        color: var(--ctp-mocha-lavender);
+    }
+}
+
+
+@media only screen and (max-width: 820px) and (prefers-color-scheme: light) {
+    .pronouns {
+        color: var(--ctp-latte-lavender);
+    }
+}

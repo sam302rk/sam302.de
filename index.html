@@ -1,77 +1,113 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GamingCraft_hd's Website</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
-    <script src="/res/main.js"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
-    <link rel="stylesheet" href="/res/styles.css">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="/res/style.css">
+    <link rel="stylesheet" href="/res/borders.css">
+    <title>Samuel302</title>
 </head>
 
 <body>
-    <div class="absolute center-xy">
-        <h1>Hey!</h1>
-        <h1 class="light">I'm Samuel</h1>
-        <div class="center-text">
-            <a href="https://www.github.com/gamingcrafthd"><em class="bi-github socials"></em></a>
-            <a href="https://www.instagram.com/gamingcraft001"><em class="bi-instagram socials"></em></a>
-            <a href="https://www.twitter.com/gamingcraft001"><em class="bi-twitter socials"></em></a>
+    <div class="window" id="whoami">
+        <div class="inline-block">
+            <p>$ whoami</p>
+            <p class="const">Hello! I'm <a class="hello">%name%</a>. <span class="pronouns">(%pronouns%)</span></p>
         </div>
+        <img class="pic desktop" align="right" alt="my current profile picture" id="pic">
     </div>
 
-
-    <a href="#projects"><em class="bi bi-chevron-down absolute down" style="left: 50%; top: 90%;"></em></a>
-
-    <!-- About me -->
-
-    <div id="projects" class="absolute page" style="left: 50%; top: 150%;">
-        <h2 class="absolute" style="left: 50%; top: 6.5%">My Projects</h2>
-        <div class="projects" style="left: 50%; top: 55%;">
-            <div class="project">
-                <img src="/res/uc3.svg" alt="UC³ - Abstract into the Future">
-                <p class="project-text center-text">The Utility Client<br> is a client made for the<br> popular game “Minecraft”.<br><br> It contains features<br> like a in-game overlay<br> and cosmetic features like capes.</p>
-                <a href="https://uc.gamingcraft.de/"><button>Website</button></a>
-            </div>
-
-            <div class="project">
-                <img src="/res/gnet.svg" alt="GNETProject.org">
-                <p class="project-text center-text">GNET is an alternative social network<br> with the mission to provide the users<br> with a non-profit way to watch videos,<br> read blogs and share images.<br><br>Without any rigged algorithms.<br>And with more privacy.</p>
-                <a href="https://www.gnetproject.org/"><button>Website</button></a>
-            </div>
-        </div>
-
-    </div>
-
-    <div id="contact" class="absolute page" style="left: 50%; top: 250%;">
-        <div class="absolute center-text" style="left: 50%; top: 50%;">
-            <h2>Contact me</h2>
-            <p>The fastest way to contact me is via Discord or E-Mail.<br>Please contact me via E-Mail for job offers.</p>
-
-            <div>
-                <a href="mailto://samuel.mischl@gamingcraft.de"></a><em class="bi bi-envelope-fill contact-icon"></em></a>
-                <a href="https://www.discord.com/7uC8MvYeDj"><em class="bi bi-discord contact-icon"></em></a>
-            </div>
-        </div>
-    </div>
-
-    <div id="footer" class="absolute footer" style="left: 50%; top: 309%;">
-        <p class="footer-header center-text">GamingCraft_hd
-            <k class="thin">|</k>
-            <k class="light">Samuel</k>
+    <div class="window" id="about">
+        <p>$ cat <a href="#about">about_me.txt</a></p>
+        <p class="const">
+            As stated above my name is %name%.<br>
+            I'm german and live in <a href="https://www.thelaend.de">The Länd</a>.
         </p>
-        <div class="center-text">
-            <a href="https://www.reddit.com/u/gamingcraft001"><em class="bi bi-reddit  footer-social"></em></a>
-            <a href="https://www.discord.com/invite/7uC8MvYeDj"><em class="bi bi-discord footer-social"></em></a>
-            <a href="https://www.github.com/gamingcrafthd"><em class="bi bi-github  footer-social"></em></a>
-            <a href="https://www.twitter.com/gamingcraft001"><em class="bi bi-twitter footer-social"></em></a>
-            <a href="https://www.youtube.com/channel/UCBkWbZFNBOrb7pc9wmIywDw"><em class="bi bi-youtube footer-social"></em></a>
-        </div>
+
+        <p>
+            I love to write <a href="#projects">open-source software</a>,<br>
+            also I'm <a href="https://blog.gamingcraft.de/">a big railfan.</a><br>
+        </p>
+
+        <p class="comment">
+            // You want to make me a job offer?<br>
+            // <a href="#contact">Contact me via E-Mail.</a>
+        </p>
     </div>
+
+    <div class="window" id="setup">
+        <p>$ neofetch --stdout</p>
+        <p class="comment">// My current setup</p>
+        <p class="desktop">
+            OS: <a href="https://archlinux.org">Arch Linux</a> x86_64 <span class="comment">// + Windows 10 Pro</span><br>
+            Host: B550 AORUS PRO AC<br>
+            Kernel: 6.1.12-arch1-1<br>
+            Shell: <a href="https://ohmyz.sh/">zsh</a> 5.9<br>
+            DE: <a href="https://kde.org/plasma-desktop/">Plasma</a> 5.27.1<br>
+            WM: KWin<br>
+            Terminal: <a href="https://alacritty.org/">Alacritty</a><br>
+            CPU: AMD Ryzen 9 3900X (24) @ 3.800GHz<br>
+            GPU: NVIDIA GeForce RTX 2080 Ti Rev. A<br>
+            Memory: 32040MiB <span class="comment"> // => 32GB</span>
+        </p>
+        <p class="mobile">
+            <a href="https://archlinux.org">Arch Linux</a><br>
+            B550 AORUS PRO<br>
+            <a href="https://ohmyz.sh/">zsh</a> 5.9<br>
+            <a href="https://kde.org/plasma-desktop/">Plasma</a> 5.27.1<br>
+            KWin<br>
+            <a href="https://alacritty.org/">Alacritty</a><br>
+            AMD Ryzen 9 3900X<br>
+            NVIDIA GeForce RTX 2080 Ti
+            Memory: 32040MiB <span class="comment"> // => 32GB</span>
+        </p>
+    </div>
+
+    <div class="window" id="projects">
+        <p>$ exa -l <a href="#projects">projects</a>/</p>
+
+        <p class="const desktop">
+            .rwxr-xr-x 001 %lname% <a href="https://uc.gamingcraft.de/">UtilityClient</a><br>
+            .rwxr-xr-x 002 %lname% <a
+                href="https://www.lotus-simulator.de/forum/index.php?thread/7345-westlingen">Westlingen</a><br>
+            .rwxr-xr-x 003 %lname% <a href="https://github.com/samuel-302/DREP">DREP</a>
+        </p>
+
+        <p class="const mobile">
+            <a href="https://uc.gamingcraft.de/">UtilityClient</a><br>
+            <a href="https://www.lotus-simulator.de/forum/index.php?thread/7345-westlingen">Westlingen</a><br>
+            <a href="https://github.com/samuel-302/DREP">DREP</a>
+        </p>
+
+        <p class="comment">
+            // These are only a few of my projects.<br>
+            // To see a full list, <a href="#contact">visit me on GitHub</a>.
+        </p>
+    </div>
+
+    <div class="window" id="contact">
+        <p class="desktop">$ firefox <a href="mailto://samuel@gamingcraft.de">mailto://samuel@gamingcraft.de</a></p>
+        <p class="mobile"><a href="mailto://samuel@gamingcraft.de">Contact me</a></p>
+        <p class="const comment">
+            // I'm also on <a href="https://www.github.com/samuel-302">GitHub</a>,
+            <a href="https://www.instagram.com/sam302rk">Instagram</a> &
+            <a href="https://www.twitter.com/gamingcraft001">Twitter</a>!
+        </p>
+    </div>
+
+    <div class="window" id="footer">
+        <p>$ cat footer.txt</p>
+        <p class="const">
+            Copyright (c) 2023-%year% %name% - <a href="#whoami">jump to the top</a>
+        </p>
+    </div>
+
+    <script src="res/src/logger.js"></script>
+    <script src="res/src/index.js"></script>
+    <script src="res/src/do_not_open_to_not_spoil_yourself.js"></script>
 </body>
 
 </html>

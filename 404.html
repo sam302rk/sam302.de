@@ -1,17 +1,37 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GamingCraft.de</title>
-    <meta http-equiv="refresh" content="0; url=/">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="/res/style.css">
+    <link rel="stylesheet" href="/res/borders.css">
+    <title>Error 404 - Page not found!</title>
 </head>
 
 <body>
-    <h1>Page not found.</h1>
-    <h2>Redirecting to the <a href="/">homepage</a>...</h2>
+    <div class="window" id="whoami">
+        <p class="const">$ %url%</p>
+        <p class="const">zsh: Command not found: %path%</p>
+
+        <p class="comment">
+            // Error 404<br>
+            // Page not found.<br>
+            // <a href="/">Click here</a> to return home.
+        </p>
+    </div>
+
+    <div class="window" id="footer">
+        <p>$ cat footer.txt</p>
+        <p class="const">
+            Copyright (c) 2023-%year%
+        </p>
+    </div>
+
+    <script src="res/src/logger.js"></script>
+    <script src="res/src/404.js"></script>
 </body>
 
 </html>
