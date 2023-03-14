@@ -36,7 +36,7 @@ function rand(min, max) {
 document.getElementById('pic').addEventListener('click', async() => {
     logger.debug('Click on my profile picture!')
 
-    var audio = new Audio(`/res/audio/click/${rand(1, 3)}.wav`)
+    var audio = new Audio(`/res/audio/click${rand(1, 3)}.wav`)
     audio.volume = audio.volume / 4
     audio.play()
 })
