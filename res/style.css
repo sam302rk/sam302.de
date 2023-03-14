@@ -98,6 +98,30 @@ a:active {
     visibility: hidden;
 }
 
+.gamerun > .gamecontainer {
+    display: block;
+	position: fixed;
+	width: fit-content;
+	height: fit-content;
+	top: 50vh;
+	left: 50vw;
+	transform: translate(-50%, -50%);
+	border: 16px solid var(--ctp-mocha-mantle);
+	border-radius: 16px;
+	background-color: var(--ctp-mocha-mantle);
+}
+
+.gamerun {
+    overflow: hidden;
+
+}
+
+.game {
+	width: 1280px;
+	height: 720px;
+	background-color: var(--ctp-mocha-crust);
+}
+
 @media (prefers-color-scheme: light) {
     body {
         background: var(--ctp-latte-crust);

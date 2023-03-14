@@ -20,6 +20,17 @@
         0 0 0 24px var(--ctp-mocha-red);
 }
 
+.pride-h:active {
+    transition: all .05s;
+    box-shadow:
+        0 0 0 4px var(--ctp-mocha-mauve),
+        0 0 0 8px var(--ctp-mocha-blue),
+        0 0 0 12px var(--ctp-mocha-green),
+        0 0 0 16px var(--ctp-mocha-yellow),
+        0 0 0 20px var(--ctp-mocha-peach),
+        0 0 0 24px var(--ctp-mocha-red);
+}
+
 .trans {
     transition: all .2s;
     box-shadow:
