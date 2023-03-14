@@ -7,14 +7,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="/res/style.css">
-    <link rel="stylesheet" href="/res/borders.css">
+    <link rel="stylesheet" href="/res/colors.css">
     <title>Error 404 - Page not found!</title>
 </head>
 
 <body>
     <div class="window" id="whoami">
-        <p class="const">$ %url%</p>
-        <p class="const">zsh: Command not found: %path%</p>
+        <p class="const"><span class="green">$</span> %url%</p>
+        <p class="const red">zsh: Command not found: %path%</p>
 
         <p class="comment">
             // Error 404<br>
@@ -24,7 +24,7 @@
     </div>
 
     <div class="window" id="footer">
-        <p>$ cat footer.txt</p>
+        <p><span class="green">$</span> cat footer.txt</p>
         <p class="const">
             Copyright (c) 2023-%year%
         </p>

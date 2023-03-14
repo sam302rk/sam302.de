@@ -8,20 +8,21 @@
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="/res/style.css">
     <link rel="stylesheet" href="/res/borders.css">
+    <link rel="stylesheet" href="/res/colors.css">
     <title>Samuel302</title>
 </head>
 
 <body class="" id="body">
     <div class="window" id="whoami">
         <div class="inline-block">
-            <p>$ whoami</p>
+            <p><span class="green">$</span> whoami</p>
             <p class="const">Hello! I'm <a class="hello">%name%</a>. <span class="pronouns">(%pronouns%)</span></p>
         </div>
         <img class="pic desktop pride-h" align="right" alt="my current profile picture" id="pic">
     </div>
 
     <div class="window" id="about">
-        <p>$ cat <a href="#about">about_me.txt</a></p>
+        <p><span class="green">$</span> cat <a href="#about">about_me.txt</a></p>
         <p class="const">
             As stated above my name is %name%.<br>
             I'm german and live in <a href="https://www.thelaend.de">The Länd</a>.
@@ -39,20 +40,20 @@
     </div>
 
     <div class="window" id="setup">
-        <p>$ neofetch --stdout</p>
+        <p><span class="green">$</span> neofetch <span class="mauve">--stdout</span></p>
         <p class="comment">// My current setup</p>
         <p class="desktop">
-            OS: <a href="https://archlinux.org">Arch Linux</a> x86_64 <span class="comment">// + Windows 10
+            <span class="subtext">OS:</span> <a href="https://archlinux.org">Arch Linux</a> x86_64 <span class="comment">// + Windows 10
                 Pro</span><br>
-            Host: B550 AORUS PRO AC<br>
-            Kernel: 6.1.12-arch1-1<br>
-            Shell: <a href="https://ohmyz.sh/">zsh</a> 5.9<br>
-            DE: <a href="https://kde.org/plasma-desktop/">Plasma</a> 5.27.1<br>
-            WM: KWin<br>
-            Terminal: <a href="https://alacritty.org/">Alacritty</a><br>
-            CPU: AMD Ryzen 9 3900X (24) @ 3.800GHz<br>
-            GPU: NVIDIA GeForce RTX 2080 Ti Rev. A<br>
-            Memory: 32040MiB <span class="comment"> // => 32GB</span>
+                <span class="subtext">Host:</span> B550 AORUS PRO AC<br>
+                <span class="subtext">Kernel:</span> 6.1.12-arch1-1<br>
+                <span class="subtext">Shell:</span> <a href="https://ohmyz.sh/">zsh</a> 5.9<br>
+                <span class="subtext">DE:</span> <a href="https://kde.org/plasma-desktop/">Plasma</a> 5.27.1<br>
+                <span class="subtext">WM:</span> KWin<br>
+                <span class="subtext">Terminal:</span> <a href="https://alacritty.org/">Alacritty</a><br>
+                <span class="subtext">CPU:</span> AMD Ryzen 9 3900X (24) @ 3.800GHz<br>
+                <span class="subtext">GPU:</span> NVIDIA GeForce RTX 2080 Ti Rev. A<br>
+                <span class="subtext">Memory:</span> 32040MiB <span class="comment"> // => 32GB</span>
         </p>
         <p class="mobile">
             <a href="https://archlinux.org">Arch Linux</a><br>
@@ -68,13 +69,14 @@
     </div>
 
     <div class="window" id="projects">
-        <p>$ exa -l <a href="#projects">projects</a>/</p>
+        <p><span class="green">$</span> exa <span class="mauve">-l</span> <a href="#projects">projects</a>/</p>
 
         <p class="const desktop">
-            .rwxr-xr-x 001 %lname% <a href="https://uc.gamingcraft.de/">UtilityClient</a><br>
-            .rwxr-xr-x 002 %lname% <a
+            <span class="subtext">.rwxr-xr-x 001 %lname%</span> <a
+                href="https://uc.gamingcraft.de/">UtilityClient</a><br>
+            <span class="subtext">.rwxr-xr-x 002 %lname%</span> <a
                 href="https://www.lotus-simulator.de/forum/index.php?thread/7345-westlingen">Westlingen</a><br>
-            .rwxr-xr-x 003 %lname% <a href="https://github.com/samuel-302/DREP">DREP</a>
+            <span class="subtext">.rwxr-xr-x 003 %lname%</span> <a href="https://github.com/samuel-302/DREP">DREP</a>
         </p>
 
         <p class="const mobile">
@@ -90,7 +92,8 @@
     </div>
 
     <div class="window" id="contact">
-        <p class="desktop">$ firefox <a href="mailto://samuel@gamingcraft.de">mailto://samuel@gamingcraft.de</a></p>
+        <p class="desktop"><span class="green">$</span> firefox <a
+                href="mailto://samuel@gamingcraft.de">mailto://samuel@gamingcraft.de</a></p>
         <p class="mobile"><a href="mailto://samuel@gamingcraft.de">Contact me</a></p>
         <p class="const comment">
             // I'm also on <a href="https://www.github.com/samuel-302">GitHub</a>,
@@ -100,9 +103,9 @@
     </div>
 
     <div class="window" id="footer">
-        <p>$ cat footer.txt</p>
+        <p><span class="green">$</span> cat footer.txt</p>
         <p class="const">
-            Copyright (c) 2023-%year% %name% - <a href="#whoami">jump to the top</a>
+            Copyright (c) 2023-%year% <span class="lavender">%name%</span> - <a href="#whoami">jump to the top</a>
         </p>
     </div>
 

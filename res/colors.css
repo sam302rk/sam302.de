@@ -1,0 +1,63 @@
+.rosewater {
+    color: var(--ctp-mocha-rosewater);
+}
+
+.flamingo {
+    color: var(--ctp-mocha-flamingo);
+}
+
+.pink {
+    color: var(--ctp-mocha-pink);
+}
+
+.mauve {
+    color: var(--ctp-mocha-mauve);
+}
+
+.red {
+    color: var(--ctp-mocha-red);
+}
+
+.maroon {
+    color: var(--ctp-mocha-maroon);
+}
+
+.peach {
+    color: var(--ctp-mocha-peach);
+}
+
+.yellow {
+    color: var(--ctp-mocha-yellow);
+}
+
+.green {
+    color: var(--ctp-mocha-green);
+}
+
+.teal {
+    color: var(--ctp-mocha-teal);
+}
+
+.sky {
+    color: var(--ctp-mocha-sky);
+}
+
+.sapphire {
+    color: var(--ctp-mocha-sapphire);
+}
+
+.blue {
+    color: var(--ctp-mocha-blue);
+}
+
+.lavender {
+    color: var(--ctp-mocha-lavender);
+}
+
+.subtext {
+    color: var(--ctp-mocha-overlay1);
+}
+
+.subtext:hover {
+    color: var(--ctp-mocha-overlay2);
+}
