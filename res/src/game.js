@@ -13,11 +13,6 @@ const gameConstants = {
 
 
 document.getElementById('pic').addEventListener('click', async() => {
-    logger.debug('Click on my profile picture!')
-
-    var audio = new Audio(`${gameConstants.audioPath}/click${rand(1, 3)}.wav`)
-    audio.volume = audio.volume / 4
-    audio.play()
 
     if (!gameEnabled) { // Freshly enabled
         document.getElementById('body').classList.add('gamerun')

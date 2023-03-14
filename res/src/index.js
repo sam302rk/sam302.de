@@ -32,3 +32,11 @@ for (const node of document.getElementsByClassName('const')) {
 function rand(min, max) {
     return Math.floor(Math.random() * (max - min + 1) + min)
 }
+
+document.getElementById('pic').addEventListener('click', async() => {
+    logger.debug('Click on my profile picture!')
+
+    var audio = new Audio(`/res/audio/click/${rand(1, 3)}.wav`)
+    audio.volume = audio.volume / 4
+    audio.play()
+})
