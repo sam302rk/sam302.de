@@ -1,0 +1,9 @@
+// For the wallpapers see /res/img/wallpapers/credit.txt
+
+samuel.png, gamingcraft.png:
+These images belong to my private archive.
+Please do not use them without written permission.
+
+sakura.png, emily.png:
+These images were generated using a free generator.
+Please don't use them.

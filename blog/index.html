@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Samuel302</title>
+    <link rel="stylesheet" href="/res/style.css">
+    <link rel="stylesheet" href="/res/blog.css">
+    <link rel="stylesheet" href="/res/borders.css">
+    <link rel="stylesheet" href="/res/colors.css">
+</head>
+
+<body id="body">
+    <div class="bg" id="bg"></div>
+    <div class="window" id="header"><span class="lavender const">%name%'s</span> blog - <a href="/">Home</a> <a href="/blog">Articles</a></div>
+
+    <div class="window" id="home">
+        <p><span class="green">$</span> exa articles.txt</p>
+
+        <div id="index">
+
+        </div>
+    </div>
+
+    <div class="window" id="arwin">
+        <p class="const"><span class="green">$</span> exa %a%.md</p>
+        <div id="article"></div>
+    </div>
+
+    <div class="window" id="footer">
+        <p><span class="green">$</span> cat footer.txt</p>
+        <p class="const">
+            Copyright (c) 2023-%year% <span class="lavender">%name%</span> - <a href="#whoami">jump to the top</a><br>
+        </p>
+    </div>
+
+    <script src="/res/src/logger.js"></script>
+    <script src="/res/src/index.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+
+    <script src="/res/src/blog.js"></script>
+
+</body>
+
+</html>

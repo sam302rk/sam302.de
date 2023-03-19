@@ -15,16 +15,12 @@ const constants = {
     'year': new Date().getFullYear()
 }
 
-if (params.debug != 'true') logger.debug('Debug mode disabled! Enable with "debug=true".')
-
-document.getElementById('pic').src = `/res/img/${constants.lname}.png`
-if (constants.pronouns.startsWith('she')) document.getElementById('pic').classList.add('trans')
-
 document.title = `${my_name}302`
 
 for (const node of document.getElementsByClassName('const')) {
     node.innerHTML = node.innerHTML.replace(/%\S*%/g, match => {
-        return constants[match.replace(/%/g, '')] || match
+        const query = match.replace(/%/g, '')
+        return constants[query] || params[query] || match
     })
 }
 
@@ -33,10 +29,15 @@ function rand(min, max) {
     return Math.floor(Math.random() * (max - min + 1) + min)
 }
 
-document.getElementById('pic').addEventListener('click', async() => {
-    logger.debug('Click on my profile picture!')
+document.getElementById('bg').style.backgroundImage = `url('/res/img/wallpapers/export${rand(1, 4)}.png')`
 
-    var audio = new Audio(`/res/audio/click${rand(1, 3)}.wav`)
-    audio.volume = audio.volume / 4
-    audio.play()
-})
+const height = document.body.offsetHeight
+const width = document.body.offsetWidth
+
+const onscroll = async () => {
+    const result = window.scrollY - (window.scrollY * (window.scrollY / height) / height) * width
+    document.getElementById('bg').style.top = `${result}px`
+}
+
+onscroll()
+window.onscroll = onscroll

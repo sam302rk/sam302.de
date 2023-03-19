@@ -1,0 +1,2 @@
+click1.wav, click2.wav, click3.wav, hit.wav:
+Generated on sfxr.me.

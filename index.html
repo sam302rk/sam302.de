@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="de">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
@@ -7,18 +7,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="/res/style.css">
+    <link rel="stylesheet" href="/res/index.css">
     <link rel="stylesheet" href="/res/borders.css">
     <link rel="stylesheet" href="/res/colors.css">
     <title>Samuel302</title>
 </head>
 
-<body class="" id="body">
+<body id="body">
+    <div class="bg" id="bg"></div>
+
     <div class="window" id="whoami">
         <div class="inline-block">
             <p><span class="green">$</span> whoami</p>
             <p class="const">Hello! I'm <a class="hello">%name%</a>. <span class="pronouns">(%pronouns%)</span></p>
+            <p><a href="#about">About</a> <a href="#setup">Setup</a> <a href="#projects">Projects</a> <a href="#contact">Contact</a> <a href="/blog">Blog</a></p>
         </div>
-        <img class="pic desktop pride-h" align="right" alt="my current profile picture" id="pic">
+        <img class="pic desktop pride-h" alt="my current profile picture" id="pic" align="right">
     </div>
 
     <div class="window" id="about">
@@ -29,8 +33,8 @@
         </p>
 
         <p>
-            I love to write <a href="#projects">open-source software</a>,<br>
-            also I'm <a href="https://blog.gamingcraft.de/" class="disabled">a big railfan</a>.<br>
+            I love to write <a href="#projects">open-source software</a>.<br>
+            I'm also <a href="https://www.instagram.com/sam302rk">a big railfan</a>.
         </p>
 
         <p class="comment">
@@ -41,19 +45,20 @@
 
     <div class="window" id="setup">
         <p><span class="green">$</span> neofetch <span class="mauve">--stdout</span></p>
-        <p class="comment">// My current setup</p>
+        <p class="comment">// my current setup</p>
         <p class="desktop">
-            <span class="subtext">OS:</span> <a href="https://archlinux.org">Arch Linux</a> x86_64 <span class="comment">// + Windows 10
+            <span class="subtext">OS:</span> <a href="https://archlinux.org">Arch Linux</a> x86_64 <span
+                class="comment">// + Windows 10
                 Pro</span><br>
-                <span class="subtext">Host:</span> B550 AORUS PRO AC<br>
-                <span class="subtext">Kernel:</span> 6.1.12-arch1-1<br>
-                <span class="subtext">Shell:</span> <a href="https://ohmyz.sh/">zsh</a> 5.9<br>
-                <span class="subtext">DE:</span> <a href="https://kde.org/plasma-desktop/">Plasma</a> 5.27.1<br>
-                <span class="subtext">WM:</span> KWin<br>
-                <span class="subtext">Terminal:</span> <a href="https://alacritty.org/">Alacritty</a><br>
-                <span class="subtext">CPU:</span> AMD Ryzen 9 3900X (24) @ 3.800GHz<br>
-                <span class="subtext">GPU:</span> NVIDIA GeForce RTX 2080 Ti Rev. A<br>
-                <span class="subtext">Memory:</span> 32040MiB <span class="comment"> // => 32GB</span>
+            <span class="subtext">Host:</span> B550 AORUS PRO AC<br>
+            <span class="subtext">Kernel:</span> 6.1.12-arch1-1<br>
+            <span class="subtext">Shell:</span> <a href="https://ohmyz.sh/">zsh</a> 5.9<br>
+            <span class="subtext">DE:</span> <a href="https://kde.org/plasma-desktop/">Plasma</a> 5.27.1<br>
+            <span class="subtext">WM:</span> KWin<br>
+            <span class="subtext">Terminal:</span> <a href="https://alacritty.org/">Alacritty</a><br>
+            <span class="subtext">CPU:</span> AMD Ryzen 9 3900X (24) @ 3.800GHz<br>
+            <span class="subtext">GPU:</span> NVIDIA GeForce RTX 2080 Ti Rev. A<br>
+            <span class="subtext">Memory:</span> 32040MiB <span class="comment"> // => 32GB</span>
         </p>
         <p class="mobile">
             <a href="https://archlinux.org">Arch Linux</a><br>
@@ -98,14 +103,15 @@
         <p class="const comment">
             // I'm also on <a href="https://www.github.com/samuel-302">GitHub</a>,
             <a href="https://www.instagram.com/sam302rk">Instagram</a> &
-            <a href="https://www.twitter.com/gamingcraft001">Twitter</a>!
-        </p>
+            <a href="https://www.twitter.com/gamingcraft001">Twitter</a>!<br>
+            // And while you're on it, check also <a href="/blog">my blog</a> out!</p>
     </div>
 
     <div class="window" id="footer">
         <p><span class="green">$</span> cat footer.txt</p>
         <p class="const">
             Copyright (c) 2023-%year% <span class="lavender">%name%</span> - <a href="#whoami">jump to the top</a>
+            <!-- <span class="comment">// Intro jingle by <a class="yellow" href="https://soundcloud.com/riomusic01">Mariology</a>, tysm!</span> -->
         </p>
     </div>
 
@@ -115,7 +121,21 @@
 
     <script src="res/src/logger.js"></script>
     <script src="res/src/index.js"></script>
-    <script src="res/src/do_not_open_to_not_spoil_yourself.js"></script>
+
+    <script>
+
+        document.getElementById('pic').src = `/res/img/${constants.lname}.png`
+        if (constants.pronouns.startsWith('she')) document.getElementById('pic').classList.add('trans')
+
+        document.getElementById('pic').addEventListener('click', async () => {
+            logger.debug('Click on my profile picture!')
+
+            var audio = new Audio(`/res/audio/click${rand(1, 3)}.wav`)
+            audio.volume = audio.volume / 4
+            audio.play()
+        })
+    </script>
+
     <!-- <script src="res/src/game.js"></script> -->
 </body>
 
