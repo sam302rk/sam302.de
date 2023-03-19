@@ -140,3 +140,9 @@ a:active {
         display: none;
     }
 }
+
+@media (prefers-reduced-motion) {
+    .bg {
+        display: none;
+    }
+}

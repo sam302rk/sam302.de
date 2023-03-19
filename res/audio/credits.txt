@@ -1,2 +1,5 @@
 click1.wav, click2.wav, click3.wav, hit.wav:
 Generated on sfxr.me.
+
+jingle_full.wav, jingle_short.wav:
+Made by Mariology. Thank you so much!
