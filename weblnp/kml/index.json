@@ -1,0 +1,61 @@
+{
+    "cities": [
+        "Augsburg",
+        "Berlin",
+        "Baden-Baden",
+        "Braunschweig",
+        "Bremen",
+        "Bretten",
+        "Darmstadt",
+        "Enzkreis",
+        "Frankfurt",
+        "Freiburg",
+        "Heidelberg",
+        "Heilbronn",
+        "Karlsruhe",
+        "Kassel",
+        "Konstanz",
+        "Ludwigsburg",
+        "Mannheim",
+        "München",
+        "Nürnberg",
+        "Offenburg",
+        "Pforzheim",
+        "Potsdam",
+        "Radolfzell",
+        "Stuttgart",
+        "Ulm",
+        "Weiden",
+        "Würzburg",
+        "Rhein-Neckar"
+    ],
+    "cityData": {
+        "Karlsruhe": {
+            "years": [
+                2023,
+                2021,
+                2018,
+                2012,
+                2004,
+                2002,
+                1997,
+                1989
+            ],
+            "variants": []
+        },
+        "Berlin": {
+            "years": [],
+            "variants": [
+                "S-Bahn",
+                "Strassenbahn",
+                "U-Bahn"
+            ]
+        },
+        "Rhein-Neckar": {
+            "years": [],
+            "variants": [
+                "S-Bahn"
+            ]
+        }
+    }
+}
