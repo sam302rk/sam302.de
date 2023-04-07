@@ -77,3 +77,11 @@ function overwriteResults(content) {
     document.getElementById('citysearch_results').innerHTML = content
     sort('citysearch_results')
 }
+
+function sat() {
+    L.tileLayer(
+        'http://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {
+        attribution: '&copy; <a href="http://www.esri.com/">Esri</a>, i-cubed, USDA, USGS, AEX, GeoEye, Getmapping, Aerogrid, IGN, IGP, UPR-EGP, and the GIS User Community | &copy; Ebou',
+        maxZoom: 18,
+    }).addTo(map)
+}

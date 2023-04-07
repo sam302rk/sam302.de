@@ -1,3 +1,7 @@
+const params = new Proxy(new URLSearchParams(window.location.search), {
+    get: (searchParams, prop) => searchParams.get(prop),
+})
+
 function fetchText(url, reciever) {
     fetch(url).then(res => res.text()).then(text => reciever(text))
 }
