@@ -15,18 +15,38 @@
 <body>
     <div id="map"></div>
 
-    <div id="citysearch_container">
-        <div class="citysearch_window">
-            <input type="text" id="citysearch_input" placeholder="Stadt...">
-            <div class="ct"><b>--- Search results ---</b></div>
+    <!-- 
+        search.placeholder: "City...",
+        search.results: "Search results",
+        options.title: "City options",
+        options.layer.default: "Choose a layer",
+        options.save: "Save"
+    -->
+
+    <div class="container" style="top: 15px; right: 15px;">
+        <div class="citysearch window">
+            <input type="text" id="citysearch_input" class="i18n_placeholder" placeholder="search.placeholder">
+            <div class="ct"><b class="i18n">search.results</b></div>
             <div id="citysearch_results">
             </div>
+        </div>
+    </div>
+
+    <div class="container hide" style="top: 15px; left: 50vw; transform: translateX(-50%);" id="variant_container">
+        <div class="variantsel window">
+            <div style="margin-bottom: 6px;"><b class="i18n">options.title</b></div>
+            <select id="variantSel">
+                <option class="i18n">options.layer.default</option>
+            </select>
+            <button id="variantSet" class="i18n">options.save</button>
         </div>
     </div>
 
     <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"
         integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM=" crossorigin=""></script>
     <script src="res/L.KML.js"></script>
+    <script src="res/utils.js"></script>
+    <script src="res/i18n.js"></script>
     <script src="res/index.js"></script>
 </body>
 

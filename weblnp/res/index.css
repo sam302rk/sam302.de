@@ -20,24 +20,29 @@ body {
     height: 100vh;
 }
 
-#citysearch_container {
+.container {
     display: block;
     position: fixed;
     width: fit-content;
     height: fit-content;
-    top: 15px;
-    right: 15px;
     z-index: 400;
 }
 
-.citysearch_window {
+.citysearch.window {
+    max-width: 25vw;
+}
+
+.variantsel.window {
+    max-width: 35vw;
+    text-align: center;
+}
+
+.window {
     color: var(--text);
     font-family: 'FiraCode Nerd Font Mono', 'Roboto Mono', monospace;
     border-width: 0px;
     background-color: var(--background);
-
     padding: .5em;
-    max-width: 25vw;
     overflow: hidden;
 }
 
@@ -92,4 +97,9 @@ body {
 
 .active {
     background-color: var(--background);
+}
+
+.hide {
+    display: none;
+    visibility: hidden;
 }
