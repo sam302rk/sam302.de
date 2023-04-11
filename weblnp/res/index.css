@@ -3,12 +3,16 @@
 :root {
     --text: rgb(250, 250, 250);
     --background: rgba(1, 1, 1, .5);
+    --background-hover: rgba(25, 25, 25, .5);
+    --background-active: rgba(50, 50, 50, .5);
 }
 
 @media (prefers-color-scheme: light) {
     :root {
         --text: rgb(5, 5, 5);
         --background: rgba(250, 250, 250, .5);
+        --background-hover: rgba(245, 245, 245, .5);
+        --background-active: rgba(240, 240, 240, .5);
     }
 }
 
@@ -102,4 +106,58 @@ body {
 .hide {
     display: none;
     visibility: hidden;
+}
+
+.leaflet-container {
+    font-family: 'FiraCode Nerd Font Mono', 'Roboto Mono', monospace !important;
+}
+
+.leaflet-bar a {
+    background-color: var(--background);
+    color: var(--text);
+    border-bottom: none;
+}
+
+.leaflet-bar a:hover {
+    background-color: var(--background-hover);
+}
+
+.leaflet-bar a:active {
+    background-color: var(--background-active);
+}
+
+.leaflet-touch .leaflet-bar {
+    border: none;
+}
+
+button {
+    font-family: 'FiraCode Nerd Font Mono', 'Roboto Mono', monospace;
+    border: none;
+    color: var(--text);
+    background-color: var(--background);
+    padding: 6px;
+}
+
+button:hover {
+    background-color: var(--background-hover);
+}
+
+button:active {
+    background-color: var(--background-active);
+}
+
+select {
+    font-family: 'FiraCode Nerd Font Mono', 'Roboto Mono', monospace;
+    border: none;
+    color: var(--text);
+    background-color: var(--background);
+    padding: 6px;
+}
+
+select:hover {
+    background-color: var(--background-hover);
+}
+
+select:active {
+    background-color: var(--background-active);
 }

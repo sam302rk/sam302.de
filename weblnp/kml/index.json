@@ -53,6 +53,12 @@
             "variants": [
                 "S-Bahn"
             ]
+        },
+        "Braunschweig": {
+            "variants": [
+                "Bus",
+                "Strassenbahn"
+            ]
         }
     }
 }

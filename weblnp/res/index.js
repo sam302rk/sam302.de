@@ -5,7 +5,7 @@ const template = name => `<div class="hvrc" id="${name}"><span class="hvr">-> </
 
 L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
     maxZoom: 16,
-    attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> | &copy; Ebou'
+    attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> | &copy; Ebou B., Justin O.'
 }).addTo(map)
 
 fetchText('kml/index.json', rawIndex => {
@@ -69,8 +69,9 @@ function citySearchResultClick(name) {
         options += `<option>${v}</option>`
     })
 
-    document.getElementById('variantSel').innerHTML = `<option>${tryTranslation('options.layer.default')}</option>` + options
+    document.getElementById('variantSel').innerHTML = options
     sort('variantSel')
+    document.getElementById('variantSel').innerHTML = `<option>${tryTranslation('options.layer.default')}</option>` + document.getElementById('variantSel').innerHTML
 }
 
 function overwriteResults(content) {
