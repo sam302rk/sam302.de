@@ -1,7 +1,0 @@
-The content of this directory is the work of Ebou except when stated otherwise.
-
-Braunschweig/Bus.kml:
-Made by and belongs to Justin Oltmann. Thank you for contributing.
-
-index.json:
-This file belongs to the website.
