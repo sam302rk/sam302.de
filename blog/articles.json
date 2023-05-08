@@ -1,14 +1,8 @@
 [
     {
-        "title": "A interesting topic",
-        "created_at": 1679178187827,
-        "descr": "A short description",
-        "file": "nowhere"
-    },
-    {
-        "title": "Another one",
-        "created_at": 1680179187827,
-        "descr": "bites the dust",
-        "file": "nowhere"
+        "title": "Hello there!",
+        "created_at": 1683570085500,
+        "descr": "Me talking about what to do with my blog.",
+        "file": "hello"
     }
 ]
