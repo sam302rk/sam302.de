@@ -29,14 +29,18 @@ function rand(min, max) {
     return Math.floor(Math.random() * (max - min + 1) + min)
 }
 
-document.getElementById('bg').style.backgroundImage = `url('/res/img/wallpapers/export${rand(1, 4)}.png')`
+document.getElementById('body').style.backgroundImage = `url('/res/img/wallpapers/export${rand(1, 4)}.png')`
 
-const height = document.body.offsetHeight
-const width = document.body.offsetWidth
+function getScrollPercent() {
+    const h = document.documentElement, b = document.body, st = 'scrollTop', sh = 'scrollHeight'
+    return (h[st]||b[st]) / ((h[sh]||b[sh]) - h.clientHeight)
+}
 
 const onscroll = async () => {
-    const result = window.scrollY - (window.scrollY * (window.scrollY / height) / height) * width
-    document.getElementById('bg').style.top = `${result}px`
+    const height = document.body.offsetHeight
+    const width = document.body.offsetWidth
+    const scrollPx = getScrollPercent() * (height-width+64)
+    document.getElementById('body').style.backgroundPositionY = `${scrollPx}px`
 }
 
 onscroll()

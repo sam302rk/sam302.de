@@ -6,11 +6,26 @@ html {
 }
 
 body {
-    background: var(--ctp-mocha-crust);
+    background-color: var(--ctp-mocha-crust);
     color: var(--ctp-mocha-text);
     font-family: 'FiraCode Nerd Font Mono', 'Roboto Mono', monospace;
     overflow-x: hidden;
     margin: 0 0;
+}
+
+body.globalbg {
+    background-image: url("/res/img/wallpapers/export0.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position-y: 0px;
+    transition: background-position-y .01s;
+    transition: background-image .01s;
+}
+
+@media (max-aspect-ratio: 1050/1000) {
+    body.globalbg {
+        background-image: url("/res/img/wallpapers/export0.png") !important;
+    }
 }
 
 .window {
@@ -125,7 +140,7 @@ a:active {
     }
 }
 
-@media only screen and (max-width: 820px) {
+@media only screen and (max-width: 890px) {
     .mobile {
         display: unset;
         visibility: unset;
