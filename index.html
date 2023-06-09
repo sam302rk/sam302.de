@@ -21,7 +21,7 @@
     <div class="window" id="whoami">
         <div class="inline-block">
             <p><span class="green">$</span> whoami</p>
-            <p class="const">Hello there! I'm <a class="hello" href="#about">%name%</a>. 👋 <span class="pronouns">(%pronouns%)</span></p>
+            <p class="const">%hellothere% <a class="hello" href="#about">%name%</a>. 👋 <span class="pronouns">(%pronouns%)</span></p>
             <p><a href="#about">About</a> <a href="#setup">Setup</a> <a href="#projects">Projects</a> <a
                     href="#contact">Contact</a> <a href="/blog">Blog</a></p>
         </div>
@@ -30,18 +30,19 @@
 
     <div class="window" id="about">
         <p><span class="green">$</span> cat <a href="#about">about_me.txt</a></p>
-            I currently live in <a href="https://www.thelaend.de/">Baden-Württemberg, Germany</a>
-            and I am a train driver in training at <a href="https://www.dbregio.de/">DB Regio</a>.
+        <p class="const">
+            %about1% <a href="https://www.thelaend.de/">Baden-Württemberg, %germany%</a>
+            %about2% <a href="https://www.dbregio.de/">DB Regio</a>.
         </p>
 
-        <p>In my free-time I love to write <a href="#projects">open-source software</a> and also take <a href="https://www.instagram.com/sam302rk/">pictures of trains</a> also known as "train spotting".</p>
+        <p class="const">%about3% <a href="#projects" class="const">%os_software%</a> %about4% <a href="https://www.instagram.com/sam302rk/">%about5%</a> %about6%.</p>
 
-        <p>Additionally I'm a member of the <a href="https://www.tsnv.de/">TSNV e.V.</a> since 2022.</p>
+        <p class="const">%about7% <a href="https://www.tsnv.de/">TSNV e.V.</a></p>
     </div>
 
     <div class="window" id="setup">
         <p><span class="green">$</span> neofetch <span class="mauve">--stdout</span></p>
-        <p class="comment">// My current <a href="#setup">Computer Setup</a></p>
+        <p class="comment const">// %setup1% <a href="#setup">Computer Setup</a></p>
         <p class="desktop">
             <span class="subtext">OS:</span> <a href="https://archlinux.org">Arch Linux</a> x86_64 <span
                 class="comment">// + Windows 10
@@ -88,9 +89,7 @@
             <a href="/weblnp">WebLNP</a>
         </p>
 
-        <p class="comment">
-            // These are only a few of my projects.<br>
-            // To see a full list, <a href="#contact">visit me on GitHub</a>.
+        <p class="comment const">%projects_comment%
         </p>
     </div>
 
@@ -123,6 +122,7 @@
     <script src="/res/src/logger.js"></script>
     <script src="/res/src/utils.js"></script>
     <script src="/res/src/background.js"></script>
+    <script src="/res/src/i18n/main.js"></script>
     <script src="/res/src/placeholders.js"></script>
 
     <script>

@@ -16,10 +16,13 @@ const constants = {
     'url': document.URL
 }
 
+let selectedLanguage = params.lang || params.language || navigator.language || navigator.userLanguage || 'en'
+for (let lang in i18n) if(lang.toString().includes(selectedLanguage)) selectedLanguage = lang.toString()
+
 function replacePlaceholders(inputString) {
     return inputString.replace(/%\S*%/g, match => {
         const query = match.replace(/%/g, '')
-        return (typeof i18n !== 'undefined' ? i18n[query] : null) || constants[query] || params[query] || match
+        return ((typeof i18n !== 'undefined') ? i18n[selectedLanguage][query] : null) || constants[query] || params[query] || match
     }) 
 }
 
