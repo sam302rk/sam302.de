@@ -6,3 +6,6 @@ function getScrollPercent() {
     const h = document.documentElement, b = document.body, st = 'scrollTop', sh = 'scrollHeight'
     return (h[st]||b[st]) / ((h[sh]||b[sh]) - h.clientHeight)
 }
+
+// Twemoji integration
+twemoji.parse(document.body, {ext: '.svg', size: 'svg'})

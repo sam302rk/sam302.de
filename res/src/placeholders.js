@@ -19,7 +19,7 @@ const constants = {
 function replacePlaceholders(inputString) {
     return inputString.replace(/%\S*%/g, match => {
         const query = match.replace(/%/g, '')
-        return constants[query] || params[query] || match
+        return (typeof i18n !== 'undefined' ? i18n[query] : null) || constants[query] || params[query] || match
     }) 
 }
 
