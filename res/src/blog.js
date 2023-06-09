@@ -1,10 +1,10 @@
 let generateArticlePreview =
-    (title, createdAt, descr, file) => { return `<p>* <a href="/blog/?a=${file}">${title}</a> <span class="comment">// ${createdAt}</span><br>↳ ${descr}</p>` }
+    (title, createdAt, descr, file) => { return `<p>* <a href="/blog/?article=${file}">${title}</a> <span class="comment">// ${createdAt}</span><br>↳ ${descr}</p>` }
 
-if (params.a) {
+if (params.article) {
     document.getElementById('home').classList.add('hide')
 
-    fetch(`/blog/articles/${params.a}.md`).then(async res => {
+    fetch(`/blog/articles/${params.article}.md`).then(async res => {
         document.getElementById('article').innerHTML += marked.parse(await res.text())
     })
 } else {

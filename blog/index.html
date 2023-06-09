@@ -5,15 +5,16 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Samuel302</title>
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+
     <link rel="stylesheet" href="/res/style.css">
-    <link rel="stylesheet" href="/res/blog.css">
-    <link rel="stylesheet" href="/res/borders.css">
     <link rel="stylesheet" href="/res/colors.css">
+    <link rel="stylesheet" href="/res/themes/mocha.css">
+    <link rel="stylesheet" href="/res/themes/latte.css">
+    <title>%name%302's Blog</title>
 </head>
 
-<body id="body">
-    <div class="bg" id="bg"></div>
+<body id="body" class="noscroll">
     <div class="window" id="header"><span class="lavender const">%name%'s</span> blog - <a href="/">Home</a> <a href="/blog">Articles</a></div>
 
     <div class="window" id="home">
@@ -25,7 +26,7 @@
     </div>
 
     <div class="window" id="arwin">
-        <p class="const"><span class="green">$</span> exa %a%.md <span class="comment">// <a href="/blog"><- back</a></span></p>
+        <p class="const"><span class="green">$</span> exa %article%.md <span class="comment">// <a href="/blog"><- back</a></span></p>
         <div id="article"></div>
     </div>
 
@@ -37,8 +38,11 @@
     </div>
 
     <script src="/res/src/logger.js"></script>
-    <script src="/res/src/index.js"></script>
+    <script src="/res/src/utils.js"></script>
+    <script src="/res/src/background.js"></script>
+    <script src="/res/src/placeholders.js"></script>
 
+    <script src="https://unpkg.com/twemoji@latest/dist/twemoji.min.js" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 
     <script src="/res/src/blog.js"></script>

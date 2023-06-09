@@ -61,3 +61,69 @@
 .subtext:hover {
     color: var(--ctp-mocha-overlay2);
 }
+
+@media (prefers-color-scheme: light) {
+    .rosewater {
+        color: var(--ctp-latte-rosewater);
+    }
+    
+    .flamingo {
+        color: var(--ctp-latte-flamingo);
+    }
+    
+    .pink {
+        color: var(--ctp-latte-pink);
+    }
+    
+    .mauve {
+        color: var(--ctp-latte-mauve);
+    }
+    
+    .red {
+        color: var(--ctp-latte-red);
+    }
+    
+    .maroon {
+        color: var(--ctp-latte-maroon);
+    }
+    
+    .peach {
+        color: var(--ctp-latte-peach);
+    }
+    
+    .yellow {
+        color: var(--ctp-latte-yellow);
+    }
+    
+    .green {
+        color: var(--ctp-latte-green);
+    }
+    
+    .teal {
+        color: var(--ctp-latte-teal);
+    }
+    
+    .sky {
+        color: var(--ctp-latte-sky);
+    }
+    
+    .sapphire {
+        color: var(--ctp-latte-sapphire);
+    }
+    
+    .blue {
+        color: var(--ctp-latte-blue);
+    }
+    
+    .lavender {
+        color: var(--ctp-latte-lavender);
+    }
+    
+    .subtext {
+        color: var(--ctp-latte-overlay1);
+    }
+    
+    .subtext:hover {
+        color: var(--ctp-latte-overlay2);
+    }
+}

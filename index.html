@@ -5,15 +5,18 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="/res/style.css">
-    <link rel="stylesheet" href="/res/index.css">
-    <link rel="stylesheet" href="/res/borders.css">
     <link rel="stylesheet" href="/res/colors.css">
-    <title>Samuel302</title>
+    <link rel="stylesheet" href="/res/themes/mocha.css">
+    <link rel="stylesheet" href="/res/themes/latte.css">
+
+    <link rel="stylesheet" href="/res/borders.css">
+    <link rel="stylesheet" href="/res/index.css">
+    <title>%name%302</title>
 </head>
 
-<body id="body" class="globalbg">
+<body id="body">
     <audio src="res/audio/jingle_full.wav" autoplay></audio>
     <div class="window" id="whoami">
         <div class="inline-block">
@@ -28,24 +31,31 @@
     <div class="window" id="about">
         <p><span class="green">$</span> cat <a href="#about">about_me.txt</a></p>
         <p class="const">
-            As stated above my name is %name%.<br>
-            I'm german and live in <a href="https://www.thelaend.de">The Länd</a>.
+            Hello there! I'm %name%.<br>
+            I currently live in <a href="https://www.thelaend.de/">Baden-Württemberg, Germany</a>
+            and I am being trained as a train driver by <a href="https://www.dbregio.de/">DB Regio</a>.
         </p>
 
         <p>
-            I love to write <a href="#projects">open-source software</a>.<br>
-            I'm also <a href="https://www.instagram.com/sam302rk">a big railfan</a>.
+            In my free-time I love to write <a href="#projects">open-source software</a>
+            and also take <a href="https://www.instagram.com/sam302rk/">pictures of trains</a> which is also referred as "train spotting".
         </p>
 
-        <p class="comment">
+        <p>And additionally I'm a member of the <a href="https://www.tsnv.de/">Treffpunkt Schienennahverkehr e.V.</a> since 2022.</p>
+
+        <!--<p class="comment">
             // You want to make me a job offer?<br>
             // <a href="#contact">Contact me via E-Mail.</a>
+        </p>-->
+
+        <p class="comment">
+            // I am currently not interested in job offers.
         </p>
     </div>
 
     <div class="window" id="setup">
         <p><span class="green">$</span> neofetch <span class="mauve">--stdout</span></p>
-        <p class="comment">// my current <a href="#setup">setup</a></p>
+        <p class="comment">// My current <a href="#setup">Computer Setup</a></p>
         <p class="desktop">
             <span class="subtext">OS:</span> <a href="https://archlinux.org">Arch Linux</a> x86_64 <span
                 class="comment">// + Windows 10
@@ -105,7 +115,7 @@
         <p class="const comment">
             // I'm also on <a href="https://www.github.com/samuel-302">GitHub</a>,
             <a href="https://www.instagram.com/sam302rk">Instagram</a> &
-            <a href="https://www.twitter.com/gamingcraft001">Twitter</a>!<br>
+            <a href="https://zug.network/@sam302">Mastodon</a>!<br>
             // And while you're at it,<br>// you can also check out <a href="/blog">my blog</a>!
         </p>
     </div>
@@ -122,10 +132,14 @@
         <canvas id="game" class="game" height="720" width="1280"></canvas>
     </div> -->
 
-    <script src="res/src/logger.js"></script>
-    <script src="res/src/index.js"></script>
+    <script src="https://unpkg.com/twemoji@latest/dist/twemoji.min.js" crossorigin="anonymous"></script>
+    <script src="/res/src/logger.js"></script>
+    <script src="/res/src/utils.js"></script>
+    <script src="/res/src/background.js"></script>
+    <script src="/res/src/placeholders.js"></script>
 
     <script>
+        // yep, i called the variable that. I'm deeply sorry.
         let clickaridoos = 0
 
         const splashes = {
@@ -134,19 +148,35 @@
             '0': 'Clickaridoos shall not be ZERO.',
             '1': 'You can\'t actually see this one. :3',
             '2': 'I use arch btw.',
-            
-            '32': 'Keep going!',
+            '3': 'You found a secret. Continue for more.',
+            '5': 'Keep going!',
+            '12': 'If you found this, message me on social media. :)',
+            '16': 'You are doing well!',
+            '32': 'Go on!',
+            '40': 'Keep exploring. There\'s so much more.',
+            '64': 'The square root of 8',
             '69': 'Nice!',
             '128': 'Continue for a treat!',
+            '302': 'For those who don\'t think of snakes when they hear Python',
             '322': 'Oh no. It\'s you again.',
+            '403': 'Error 403: Forbidden cookie.',
+            '404': 'Error 404: C\'mon really?',
             '420': 'Smoke weed everyday!',
             '1024': 'You are a maniac!',
             '1025': 'But wait! There\'s more!',
+            '2001': 'A space odyssey',
+            '2006': 'Happy Birthyear!',
+            '2048': 'It\'s like that mobile game!',
+            '2306': 'Happy Birthday!',
             '6969': 'TROLLOLOLOLOL',
+            '7000': 'WTF.',
+            '8000': 'Dude, stop.',
+            '9000': 'Your arm must hurt so badly right now...',
             '9999': 'Bro.',
             '10000': 'Now you\'re to deep into it, keep going!',
             '100000': 'You do realize, that you don\'t have to do this, right?',
             '1000000': 'Do you have hobbies?',
+            '10000000': 'You used the developer console, right? ...RIGHT?',
             '100000000': 'T-Series was first.',
             '2147483647': 'The end is never the end is never the end is... STACK OVERFLOW.',
             '9223372036854775999': 'Farlands or bust!',
@@ -167,8 +197,6 @@
             if (clickaridoos >= 3) document.title = splashes[clickaridoos] || `${clickaridoos} Cookies!`
         })
     </script>
-
-    <!-- <script src="res/src/game.js"></script> -->
 </body>
 
 </html>

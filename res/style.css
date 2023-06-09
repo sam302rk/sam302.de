@@ -11,9 +11,7 @@ body {
     font-family: 'FiraCode Nerd Font Mono', 'Roboto Mono', monospace;
     overflow-x: hidden;
     margin: 0 0;
-}
-
-body.globalbg {
+    
     background-image: url("/res/img/wallpapers/export0.png");
     background-size: contain;
     background-repeat: no-repeat;
@@ -23,13 +21,16 @@ body.globalbg {
 }
 
 @media (max-aspect-ratio: 1050/1000) {
-    body.globalbg {
+    body {
         background-image: url("/res/img/wallpapers/export0.png") !important;
     }
 }
 
+body.noscroll {
+    background-size: cover;
+}
+
 .window {
-    background: var(--ctp-mocha-base);
     max-width: 1000px;
     width: calc(100vw - 4em);
     /* 2em for margin & 2em for padding */
@@ -39,7 +40,6 @@ body.globalbg {
     padding: 1em 1em;
 
     border-radius: .5em;
-    box-shadow: 0px 2em 0px 0px var(--ctp-mocha-mantle);
 }
 
 .window:last-of-type {
@@ -107,37 +107,9 @@ a:active {
     height: 100vw;
 }
 
-@media (prefers-color-scheme: light) {
-    body {
-        background: var(--ctp-latte-crust);
-        color: var(--ctp-latte-text);
-    }
-
-    .comment {
-        color: var(--ctp-latte-surface2);
-    }
-
-    a {
-        color: var(--ctp-latte-text);
-        border-bottom: 1px dashed var(--ctp-latte-text);
-    }
-
-    a:hover {
-        border-bottom: 1px solid var(--ctp-latte-text);
-    }
-
-    a:active {
-        border-bottom: 1px solid var(--ctp-latte-text);
-    }
-
-    .window {
-        background: var(--ctp-latte-base);
-        box-shadow: 0px 2em 0px 0px var(--ctp-latte-mantle);
-    }
-
-    .bg {
-        display: none;
-    }
+.emoji {
+    width: 1em;
+    vertical-align: sub;
 }
 
 @media only screen and (max-width: 890px) {
@@ -161,3 +133,18 @@ a:active {
         display: none;
     }
 }
+
+@media not (prefers-reduced-motion) {
+    .window {
+        backdrop-filter: blur(2px);
+        transition: backdrop-filter .1s;
+    }
+
+    .window:hover {
+        backdrop-filter: blur(8px);
+        transition: backdrop-filter .1s;
+    }
+}
+
+
+
