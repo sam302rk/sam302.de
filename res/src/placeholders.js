@@ -17,6 +17,7 @@ const constants = {
 }
 
 let selectedLanguage = params.lang || params.language || navigator.language || navigator.userLanguage || 'en'
+logger.debug(selectedLanguage)
 for (let lang in i18n) if(lang.toString().includes(selectedLanguage)) selectedLanguage = lang.toString()
 
 function replacePlaceholders(inputString) {
