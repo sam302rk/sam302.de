@@ -18,6 +18,11 @@ const i18n = {
         "contact-2": "I'm currently",
         "contact-3": "not interested",
         "contact-4": "in job offers.",
+        "contact-5": "And while you're at it,",
+        "contact-6a": "you can also check out",
+        "contact-6b": "my blog",
+
+        "by": "by",
     },
 
     'de-DE': {
@@ -41,5 +46,10 @@ const i18n = {
         "contact-2": "Ich bin aktuell",
         "contact-3": "nicht interessiert",
         "contact-4": "in Job-Angebote.",
+        "contact-5": "Und wenn du schon dabei bist,",
+        "contact-6a": "dann schau dir auch",
+        "contact-6b": "meinen Blog an",
+
+        "by": "von",
     }
 }
