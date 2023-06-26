@@ -42,6 +42,16 @@ body.noscroll {
     border-radius: .5em;
 }
 
+.window {
+    backdrop-filter: blur(2px);
+    transition: backdrop-filter .1s;
+}
+
+.window:hover {
+    backdrop-filter: blur(8px);
+    transition: backdrop-filter .1s;
+}
+
 .window:last-of-type {
     box-shadow: none;
 }
@@ -133,18 +143,4 @@ a:active {
         display: none;
     }
 }
-
-@media not (prefers-reduced-motion) {
-    .window {
-        backdrop-filter: blur(2px);
-        transition: backdrop-filter .1s;
-    }
-
-    .window:hover {
-        backdrop-filter: blur(8px);
-        transition: backdrop-filter .1s;
-    }
-}
-
-
 
