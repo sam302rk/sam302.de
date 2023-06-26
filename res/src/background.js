@@ -1,4 +1,4 @@
-document.getElementById('body').style.backgroundImage = `url('/res/img/wallpapers/export${rand(1, 4)}.png')`
+document.querySelector('body').style.backgroundImage = `url('/res/img/wallpapers/export${rand(1, 4)}.png')`
 
 const onscroll = async () => {
     const height = document.body.offsetHeight
