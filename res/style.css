@@ -122,6 +122,15 @@ a:active {
     vertical-align: sub;
 }
 
+blockquote {
+    font-size: smaller;
+    color: var(--ctp-mocha-overlay2);
+    border-left-width: 3px;
+    border-left-style: solid;
+    border-left-color: rgb(53, 53, 83);
+    background-color: rgba(30, 30, 46, .4);
+}
+
 @media only screen and (max-width: 890px) {
     .mobile {
         display: unset;

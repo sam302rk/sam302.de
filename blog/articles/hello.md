@@ -10,4 +10,4 @@ including my C++ Game I'm working on, the stuff I do at the [TSNV e.V.](https://
 the open-source Leaflet-based transit map viewer or even something completely different.
 
 **But that's it from me for now, see you soon!**
-<br>~ Samuel
+<br>~ Sam
