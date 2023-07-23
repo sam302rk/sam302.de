@@ -1,5 +1,6 @@
 @import url('https://unpkg.com/@catppuccin/palette/css/catppuccin.css');
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css");
 
 html {
     scroll-behavior: smooth;
@@ -67,6 +68,12 @@ a:hover {
     border-bottom: 1px solid var(--ctp-mocha-text);
 }
 
+#header a:hover:before {
+    content: '$ ';
+    color: var(--ctp-mocha-green);
+    transition-delay: 0.2s;
+}
+
 a:active {
     text-decoration: none;
     border-bottom: 1px solid var(--ctp-mocha-text);
@@ -125,39 +132,67 @@ a:active {
 blockquote {
     font-size: smaller;
     color: var(--ctp-mocha-overlay2);
-    border-left-width: 3px;
-    border-left-style: solid;
-    border-left-color: rgb(53, 53, 83);
+    border-left: 3px solid rgb(53, 53, 83);
     background-color: rgba(30, 30, 46, .4);
 }
 
-button {
+#navbar button {
     font-family: 'FiraCode Nerd Font Mono', 'Roboto Mono', monospace;
     background-color: transparent;
     color: var(--ctp-mocha-text);
-    border-color: var(--ctp-mocha-surface1);
 
     border-style: none;
-    border-bottom-style: solid;
-    border-bottom-width: 1px;
+    border-bottom: 1px solid transparent;
 
     padding: 0.1em 0.8em;
     margin-right: 8px;
 
     font-size: 28px;
-    border-bottom-color: transparent;
 }
 
-button:hover {
+#navbar button:hover {
     border-bottom-color: var(--ctp-mocha-text);
 }
 
-button:active {
+#navbar button:active {
     color: var(--ctp-mocha-lavender);
     border-bottom-color: var(--ctp-mocha-lavender);
 }
 
+#go-up {
+    position: fixed;
+    bottom: 2em;
+    right: 2em;
+    width: 4em;
+    height: 4em;
 
+    border-style: none;
+    border-radius: 2em;
+
+    backdrop-filter: blur(3px);
+    background-color: rgba(30, 30, 46, .3);
+    color: var(--ctp-mocha-overlay0);
+    transition: background-color .2s, backdrop-filter .2s, color .2s;
+}
+
+#go-up:hover {
+    backdrop-filter: blur(4px);
+    background-color: rgba(30, 30, 46, .6);
+    color: var(--ctp-mocha-text);
+
+    transition: background-color .2s, backdrop-filter .2s, color .2s;
+}
+
+#go-up:active {
+    backdrop-filter: blur(5px);
+    background-color: rgba(30, 30, 46, .8);
+    color: var(--ctp-mocha-lavender);
+    transition: background-color .2s, backdrop-filter .2s, color .2s;
+}
+
+#go-up * {
+    font-size: 2em;
+}
 
 @media only screen and (max-width: 890px) {
     .mobile {

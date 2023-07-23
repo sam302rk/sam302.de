@@ -13,18 +13,23 @@
 
     <link rel="stylesheet" href="/res/borders.css">
     <link rel="stylesheet" href="/res/index.css">
+
     <title>%name%'s Website</title>
 </head>
 
 <body>
     <audio src="res/audio/jingle_full.wav" autoplay></audio>
+
+    <button id="go-up" onclick="document.location = '#whoami'"><i class="bi bi-caret-up"></i></button>
+
     <div class="window" id="whoami">
         <div class="inline-block">
             <p><span class="green">$</span> whoami</p>
             <p class="const">%hellothere% <a class="hello" href="#about">%name%</a>. 👋 <span class="pronouns">(%pronouns%)</span></p>
-            <div id="navbar">
+            <!-- <div id="navbar">
                 <button value="#about">About</button><button value="#setup">Setup</button><button value="#projects">Projects</button><button value="#contact">Contact</button><button value="/blog">Blog</button>
-            </div>
+            </div> -->
+            <p id="header"><a href="#about">About</a> <a href="#setup">Setup</a> <a href="#projects">Projects</a> <a href="#contact">Contact</a> <a href="/blog">Blog</a></p>
         </div>
         <img class="pic desktop pride-h" alt="my current profile picture" id="pic" align="right">
     </div>
