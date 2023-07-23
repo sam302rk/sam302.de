@@ -1,6 +1,6 @@
 const i18n = {
     'en-US': {
-        "hellothere": "Hello there! I'm",
+        "hellothere": "Heya! I'm",
         "about1": "I currently live in",
         "about2": "and I am a train driver in training at",
         "about3": "In my free-time I love to write",
@@ -26,7 +26,7 @@ const i18n = {
     },
 
     'de-DE': {
-        "hellothere": "Hey, Ich bin",
+        "hellothere": "Hej, Ich bin",
         "pronouns": "sie/ihr",
         "about1": "Aktuell wohne ich in",
         "about2": "und bin Auszubildende Lokführerin bei",

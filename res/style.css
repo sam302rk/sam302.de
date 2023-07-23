@@ -131,6 +131,34 @@ blockquote {
     background-color: rgba(30, 30, 46, .4);
 }
 
+button {
+    font-family: 'FiraCode Nerd Font Mono', 'Roboto Mono', monospace;
+    background-color: transparent;
+    color: var(--ctp-mocha-text);
+    border-color: var(--ctp-mocha-surface1);
+
+    border-style: none;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+
+    padding: 0.1em 0.8em;
+    margin-right: 8px;
+
+    font-size: 28px;
+    border-bottom-color: transparent;
+}
+
+button:hover {
+    border-bottom-color: var(--ctp-mocha-text);
+}
+
+button:active {
+    color: var(--ctp-mocha-lavender);
+    border-bottom-color: var(--ctp-mocha-lavender);
+}
+
+
+
 @media only screen and (max-width: 890px) {
     .mobile {
         display: unset;

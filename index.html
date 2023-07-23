@@ -22,13 +22,15 @@
         <div class="inline-block">
             <p><span class="green">$</span> whoami</p>
             <p class="const">%hellothere% <a class="hello" href="#about">%name%</a>. 👋 <span class="pronouns">(%pronouns%)</span></p>
-            <p><a href="#about">About</a> <a href="#setup">Setup</a> <a href="#projects">Projects</a> <a href="#contact">Contact</a> <a href="/blog">Blog</a></p>
+            <div id="navbar">
+                <button value="#about">About</button><button value="#setup">Setup</button><button value="#projects">Projects</button><button value="#contact">Contact</button><button value="/blog">Blog</button>
+            </div>
         </div>
         <img class="pic desktop pride-h" alt="my current profile picture" id="pic" align="right">
     </div>
 
     <div class="window" id="about">
-        <p><span class="green">$</span> cat <a href="#about">about_me.txt</a></p>
+        <p><span class="green">$</span> cat <a href="#about">About me.txt</a></p>
         <p class="const">
             %about1% <a href="https://www.thelaend.de/">Baden-Württemberg 🇩🇪</a>
             %about2% <a href="https://www.dbregio.de/">DB Regio</a>.
@@ -70,7 +72,7 @@
     </div>
 
     <div class="window" id="projects">
-        <p><span class="green">$</span> exa <span class="mauve">-l</span> <a href="#projects">projects</a>/</p>
+        <p><span class="green">$</span> exa <span class="mauve">-l</span> <a href="#projects">Projects</a>/</p>
 
         <p class="const desktop">
             <span class="subtext">.rwxr-xr-x 001 utilityclient</span> <a
@@ -95,8 +97,7 @@
     </div>
 
     <div class="window" id="contact">
-        <p class="desktop"><span class="green">$</span> firefox <a
-                href="mailto://sam@gamingcraft.de">mailto://sam@gamingcraft.de</a></p>
+        <p class="desktop"><span class="green">$</span> firefox <a shref="mailto://sam@gamingcraft.de">mailto://sam@gamingcraft.de</a></p>
         <p class="mobile"><a href="mailto://sam@gamingcraft.de">Contact me</a></p>
         <p class="const comment">
             // <span class="yellow">/!\</span> %contact-2% <span class="red">%contact-3%</span> %contact-4%<br><br>
@@ -109,7 +110,7 @@
     </div>
 
     <div class="window" id="footer">
-        <p><span class="green">$</span> cat footer.txt</p>
+        <p><span class="green">$</span> cat Footer.txt</p>
         <p class="const">
             Copyright (c) 2021-%year% <span class="lavender">%name%</span> — <a href="#whoami">%to-top%</a>
             <br><span class="comment">// Intro jingle %by% <a class="yellow" href="https://soundcloud.com/riomusic01">Mariology</a>, tysm!</span>
@@ -171,6 +172,13 @@
             '9223372036854775999': 'Farlands or bust!',
             '9223372036854776000': 'You used the developer console, didn\'t you?'
         }
+
+        document.querySelectorAll('#navbar button').forEach(btn => {
+            btn.addEventListener('click', () => {
+                console.log(btn)
+                document.location = btn.value
+            })
+        })
 
         document.getElementById('pic').src = `/res/img/${constants.lname}.png`
         //if (constants.pronouns.startsWith('she')) document.getElementById('pic').classList.add('trans')
