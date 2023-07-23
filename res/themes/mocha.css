@@ -1,15 +1,5 @@
 @media not (prefers-color-scheme: light) {
-    @media not (prefers-reduced-motion) {
-        .window {
-            background-color: rgba(30, 30, 46, .9);
-        }
-    }
-
-    @media (prefers-reduced-motion) {
-        .window {
-            background: var(--ctp-mocha-base);
-            box-shadow: 0px 2em 0px 0px var(--ctp-mocha-mantle);
-        }
-    }
-    
+    .window {
+        background-color: rgba(30, 30, 46, .9);
+    }   
 }
