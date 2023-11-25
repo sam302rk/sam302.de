@@ -14,21 +14,22 @@
     <link rel="stylesheet" href="/res/borders.css">
     <link rel="stylesheet" href="/res/index.css">
 
-    <title>%name%'s Website</title>
+    <title>Sam302rk</title>
 </head>
 
 <body>
     <audio src="res/audio/jingle_full.wav" autoplay></audio>
 
-    <button id="go-up" onclick="document.location = '#whoami'"><i class="bi bi-caret-up"></i></button>
+    <button id="go-up" onclick="document.location = '#whoami'">
+        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-caret-up-fill" viewBox="0 0 16 16">
+            <path d="m7.247 4.86-4.796 5.481c-.566.647-.106 1.659.753 1.659h9.592a1 1 0 0 0 .753-1.659l-4.796-5.48a1 1 0 0 0-1.506 0z"/>
+        </svg>
+    </button>
 
     <div class="window" id="whoami">
         <div class="inline-block">
             <p><span class="green">$</span> whoami</p>
             <p class="const">%hellothere% <a class="hello" href="#about">%name%</a>. 👋 <span class="pronouns">(%pronouns%)</span></p>
-            <!-- <div id="navbar">
-                <button value="#about">About</button><button value="#setup">Setup</button><button value="#projects">Projects</button><button value="#contact">Contact</button><button value="/blog">Blog</button>
-            </div> -->
             <p id="header"><a href="#about">About</a> <a href="#setup">Setup</a> <a href="#projects">Projects</a> <a href="#contact">Contact</a> <a href="/blog">Blog</a></p>
         </div>
         <img class="pic desktop pride-h" alt="my current profile picture" id="pic" align="right">
@@ -102,7 +103,7 @@
     </div>
 
     <div class="window" id="contact">
-        <p class="desktop"><span class="green">$</span> firefox <a shref="mailto://sam@gamingcraft.de">mailto://sam@gamingcraft.de</a></p>
+        <p class="desktop"><span class="green">$</span> firefox <a href="mailto://sam@gamingcraft.de">mailto://sam@gamingcraft.de</a></p>
         <p class="mobile"><a href="mailto://sam@gamingcraft.de">Contact me</a></p>
         <p class="const comment">
             // <span class="yellow">/!\</span> %contact-2% <span class="red">%contact-3%</span> %contact-4%<br><br>
@@ -122,83 +123,13 @@
         </p>
     </div>
 
-    <!-- <div class="gamecontainer">
-        <canvas id="game" class="game" height="720" width="1280"></canvas>
-    </div> -->
-
     <script src="https://unpkg.com/twemoji@latest/dist/twemoji.min.js" crossorigin="anonymous"></script>
     <script src="/res/src/logger.js"></script>
     <script src="/res/src/utils.js"></script>
     <script src="/res/src/background.js"></script>
     <script src="/res/src/i18n/main.js"></script>
     <script src="/res/src/placeholders.js"></script>
-
-    <script>
-        // yep, i called the variable that. I'm deeply sorry.
-        let clickaridoos = 0
-
-        const splashes = {
-            '-2': 'no.',
-            '-1': 'How did we get here?',
-            '0': 'Clickaridoos shall not be ZERO.',
-            '1': 'You can\'t actually see this one. :3',
-            '2': 'I use arch btw.',
-            '3': 'You found a secret. Continue for more.',
-            '5': 'Keep going!',
-            '12': 'If you found this, message me on social media. :)',
-            '16': 'You are doing well!',
-            '32': 'Go on!',
-            '40': 'Keep exploring. There\'s so much more.',
-            '64': 'The square root of 8',
-            '69': 'Nice!',
-            '128': 'Continue for a treat!',
-            '302': 'For those who don\'t think of snakes when they hear Python',
-            '322': 'Oh no. It\'s you again.',
-            '403': 'Error 403: Forbidden cookie.',
-            '404': 'Error 404: C\'mon really?',
-            '420': 'Smoke weed everyday!',
-            '1024': 'You are a maniac!',
-            '1025': 'But wait! There\'s more!',
-            '2001': 'A space odyssey',
-            '2006': 'Happy Birthyear!',
-            '2048': 'It\'s like that mobile game!',
-            '2306': 'Happy Birthday!',
-            '6969': 'TROLLOLOLOLOL',
-            '7000': 'WTF.',
-            '8000': 'Dude, stop.',
-            '9000': 'Your arm must hurt so badly right now...',
-            '9999': 'Bro.',
-            '10000': 'Now you\'re to deep into it, keep going!',
-            '100000': 'You do realize, that you don\'t have to do this, right?',
-            '1000000': 'Do you have hobbies?',
-            '10000000': 'You used the developer console, right? ...RIGHT?',
-            '100000000': 'T-Series was first.',
-            '2147483647': 'The end is never the end is never the end is... STACK OVERFLOW.',
-            '9223372036854775999': 'Farlands or bust!',
-            '9223372036854776000': 'You used the developer console, didn\'t you?'
-        }
-
-        document.querySelectorAll('#navbar button').forEach(btn => {
-            btn.addEventListener('click', () => {
-                console.log(btn)
-                document.location = btn.value
-            })
-        })
-
-        document.getElementById('pic').src = `/res/img/${constants.lname}.png`
-        //if (constants.pronouns.startsWith('she')) document.getElementById('pic').classList.add('trans')
-
-        document.getElementById('pic').addEventListener('click', async () => {
-            logger.debug('Click on my profile picture!')
-
-            var audio = new Audio(`/res/audio/click${rand(1, 3)}.wav`)
-            audio.volume = audio.volume / 4
-            audio.play()
-
-            clickaridoos += 1
-            if (clickaridoos >= 3) document.title = splashes[clickaridoos] || `${clickaridoos} Cookies!`
-        })
-    </script>
+    <script src="/res/src/game.js"></script>
 </body>
 
 </html>

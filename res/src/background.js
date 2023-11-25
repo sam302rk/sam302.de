@@ -7,5 +7,5 @@ const onscroll = async () => {
     document.querySelector('body').style.backgroundPositionY = `${scrollPx}px`
 }
 
-onscroll()
+setTimeout(async() => onscroll(), 10)
 window.onscroll = onscroll
