@@ -1,5 +1,5 @@
 let generateArticlePreview =
-    (title, createdAt, descr, file) => { return `<p>* <a href="/blog/?article=${file}">${title}</a> <span class="comment">// ${createdAt}</span><br>↳ ${descr}</p>` }
+    (title, createdAt, descr, file) => { return `<p>* <a href="/blog/?article=${file}" class="title">${title}</a> <span class="comment">// ${createdAt}</span><br>↳ ${descr}</p>` }
 
 if (params.article) {
     document.getElementById('home').classList.add('hide')

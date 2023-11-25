@@ -211,3 +211,7 @@ blockquote {
     }
 }
 
+a.title {
+    font-weight: 600;
+    color: var(--ctp-mocha-lavender);
+}
