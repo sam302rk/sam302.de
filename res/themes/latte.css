@@ -12,6 +12,12 @@
         color: var(--ctp-latte-surface2);
     }
 
+    blockquote {
+        color: var(--ctp-latte-overlay3);
+        border-left: 3px solid var(--ctp-latte-surface0);
+        background-color: rgba(239, 241, 245, .4); /* Latte base */
+    }
+
     a {
         color: var(--ctp-latte-text);
         border-bottom: 1px dashed var(--ctp-latte-text);
@@ -27,5 +33,32 @@
 
     .bg {
         display: none;
+    }
+
+    #go-up {
+        background-color: rgba(239, 241, 245, .3) !important; /* Latte base */
+        color: var(--ctp-latte-overlay0) !important;
+    }
+    
+    #go-up:hover {
+        background-color: rgba(239, 241, 245, .6) !important; /* Latte base */
+        color: var(--ctp-latte-text) !important;
+    }
+    
+    #go-up:active {
+        background-color: rgba(239, 241, 245, .8) !important; /* Latte base */
+        color: var(--ctp-latte-lavender) !important;
+    }
+
+    a.title {
+        color: var(--ctp-latte-lavender);
+    }
+
+    #contact a.link:hover {
+        color: var(--ctp-latte-lavender);
+    }
+    
+    #contact a.link:hover ~ p#tooltip:after {
+        color: var(--ctp-latte-text);
     }
 }

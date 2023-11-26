@@ -8,6 +8,14 @@
     transition: all .2s;
 }
 
+p#whoami_pride > span#rainbow {
+    display: none;
+}
+
+p#whoami_pride:hover > span#rainbow {
+    display: unset;
+}
+
 .pic {
     width: 120px;
     background-color: var(--ctp-mocha-surface0);
@@ -65,4 +73,37 @@
     width: 1280px;
     height: 720px;
     background-color: var(--ctp-mocha-crust);
+}
+
+#contact a.link {
+    margin-right: 32px;
+    border-bottom: none !important;
+}
+
+#contact a.link:hover {
+    color: var(--ctp-mocha-lavender);
+}
+
+#contact a.link:hover ~ p#tooltip:after {
+    color: var(--ctp-mocha-text);
+}
+
+#contact a.link#mail:hover ~ p#tooltip:after {
+    content: 'Write me an E-Mail. (No job offers!)';
+}
+
+#contact a.link#mastodon:hover ~ p#tooltip:after {
+    content: 'Discussions about transit & other stuff.';
+}
+
+#contact a.link#instagram:hover ~ p#tooltip:after {
+    content: 'Pictures of Trains & Trams.';
+}
+
+#contact a.link#github:hover ~ p#tooltip:after {
+    content: 'Back from when I actually programmed.';
+}
+
+#contact a.link#twt:hover ~ p#tooltip:after {
+    content: 'Mastodon but worse.';
 }

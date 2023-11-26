@@ -130,9 +130,9 @@ a:active {
 
 blockquote {
     font-size: smaller;
-    color: var(--ctp-mocha-overlay2);
-    border-left: 3px solid rgb(53, 53, 83);
-    background-color: rgba(30, 30, 46, .4);
+    color: var(--ctp-mocha-overlay3);
+    border-left: 3px solid var(--ctp-mocha-surface0);
+    background-color: rgba(30, 30, 46, .4);  /* Mocha base */
 }
 
 #navbar button {
@@ -169,14 +169,14 @@ blockquote {
     border-radius: 2em;
 
     backdrop-filter: blur(3px);
-    background-color: rgba(30, 30, 46, .3);
+    background-color: rgba(30, 30, 46, .3); /* Mocha base */
     color: var(--ctp-mocha-overlay0);
     transition: background-color .2s, backdrop-filter .2s, color .2s;
 }
 
 #go-up:hover {
     backdrop-filter: blur(4px);
-    background-color: rgba(30, 30, 46, .6);
+    background-color: rgba(30, 30, 46, .6); /* Mocha base */
     color: var(--ctp-mocha-text);
 
     transition: background-color .2s, backdrop-filter .2s, color .2s;
@@ -184,7 +184,7 @@ blockquote {
 
 #go-up:active {
     backdrop-filter: blur(5px);
-    background-color: rgba(30, 30, 46, .8);
+    background-color: rgba(30, 30, 46, .8); /* Mocha base */
     color: var(--ctp-mocha-lavender);
     transition: background-color .2s, backdrop-filter .2s, color .2s;
 }
