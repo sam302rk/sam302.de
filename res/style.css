@@ -12,7 +12,7 @@ body {
     overflow-x: hidden;
     margin: 0 0;
     
-    background-image: url("/res/img/wallpapers/export0.png");
+    background-image: url("/res/img/wallpapers/export0.jpg");
     background-size: contain;
     background-repeat: no-repeat;
     background-position-y: 0px;
@@ -22,7 +22,7 @@ body {
 
 @media (max-aspect-ratio: 1050/1000) {
     body {
-        background-image: url("/res/img/wallpapers/export0.png") !important;
+        background-image: url("/res/img/wallpapers/export0.jpg") !important;
     }
 }
 
