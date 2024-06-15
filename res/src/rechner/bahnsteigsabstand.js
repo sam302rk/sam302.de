@@ -17,7 +17,7 @@ const vehicleData = [
         vehicle: "Stadtbahnwagen Typ B",
         href: "https://de.wikipedia.org/wiki/Stadtbahnwagen_Typ_B",
         width: 2.65,
-        buffer: [ 8, 24 ]
+        buffer: [ 8, 25 ]
     },
     {
         vehicle: "DueWag GT8S(U)",

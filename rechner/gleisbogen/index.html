@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="color-scheme" content="light dark" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.classless.indigo.min.css"/>
+    <title>Gleisbogenrechner</title>
+</head>
+<body>
+    <header>
+        <h1>Gleisbogenrechner</h1>
+        <h4>Berechnung der Höchstgeschwindigkeit, Gleisabstand und Kurvenüberhöhung eines Gleisbogens</h4>
+    </header>
+
+    <main>
+        <article>
+            <h4>Eingabewerte</h4>
+
+            <label for="u"><b>Kurvenüberhöhung</b><p id="u_descr">\( u = 10mm \)</p></label>
+            <input type="range" id="u" placeholder="Kurvenüberhöhung in mm" min="10" max="180" step="1" value="10">
+    
+            <label for="R"><b>Bogenhalbmesser</b><p id="R_descr">\( R = 30m \)</p></label>
+            <input type="range" id="R" placeholder="Bogenhalbmesser in m" min="30" max="1000" step="1" value="30">
+        </article>
+
+        
+        <article>
+            <details>
+                <summary><b>Erweiterte Eingabewerte</b></summary>
+                <article>
+                    <label for="S"><b>Spurweite</b><p id="S_descr">\( S = 1435mm \)</p></label>
+                    <input type="number" id="S" value="1435">
+        
+                    <label for="u_f"><b>Überhöhungsfehlbetrag</b><p id="u_f_descr">\( u_f = 153mm \)</p></label>
+                    <input type="number" id="u_f" value="153">
+        
+                    <label for="d"><b>Gleisabstand</b><p id="d_descr">\( d = 4m \)</p></label>
+                    <input type="number" id="d" value="4">
+                    
+                    <label for="d_fd"><b>Höhe des Fahrdrahts</b><p id="d_fd_descr">\( d_{fd} = 5.65m \)</p></label>
+                    <input type="number" id="d_fd" value="5.65">
+                </article>
+            </details>
+        </article>
+        
+
+        <article>
+            <h4>Ergebnisse</h4>
+            
+            <div>
+                <b>Höhenunterschied zum Nachbargleis (y-Achse)</b>
+                <p id="d_h_descr">\( d_h = 83.9 mm \)</p>
+            </div>
+
+            <div>
+                <b>Versatz der Oberleitung (x-Achse)</b>
+                <p id="d_fdv_descr">\( d_{fdv} = 118.5 mm \)</p>
+            </div>
+
+            <div>
+                <b>Höchstgeschwindigkeit</b>
+                <p id="V_max_descr">\( V_{max} = 20 km/h \)</p>
+            </div>
+        </article>
+
+    </main>
+    
+    <footer id="footer">
+    </footer>
+
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <script src="/res/src/rechner/main.js"></script>
+    <script src="/res/src/rechner/gleisbogen.js"></script>
+</body>
+</html>
