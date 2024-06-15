@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bahnsteigsabstandrechner</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.classless.min.css"/>
+</head>
+<body>
+    <header>
+        <h1>Bahnsteigsabstandrechner</h1>
+        <h4>Berechnung des Abstands zwischen Bahnsteigkante und Gleismitte</h4>
+    </header>
+
+    <main>
+        <article>
+            <h4>Eingabewerte</h4>
+
+            <details>
+                <summary role="button">Liste mit Fahrzeugmaßen</summary>
+                <table id="max-fz-breiten-table">
+                    <tr>
+                        <th><b>Fahrzeug (-familie)</b></th>
+                        <th><b>Eigenbreite</b><br>(Breite des Wagenkasten)</th>
+                        <th><b>Sicherheitsabstand</b><br>(ohne Trittstufen)</th>
+                        <th><b>Sicherheitsabstand</b><br>(mit Trittstufen)</th>
+                    </tr>
+                </table>
+            </details>
+
+            <input type="number" id="fz-breite" placeholder="Fahrzeugbreite (in m)" required>
+            <input type="number" id="sicherheitsabstand" placeholder="Sicherheitsabstand (in cm)" required>
+
+            <button id="calculate">Berechnen</button>
+        </article>
+
+        <article>
+            <h4>Ergebnis</h4>
+            <input type="number" id="result" placeholder="Abstand des Bahnsteigs zur Gleismitte (in m)" readonly>
+        </article>
+    </main>
+    
+    <footer id="footer">
+    </footer>
+
+    <script src="/res/src/rechner/main.js"></script>
+    <script src="/res/src/rechner/bahnsteigsabstand.js"></script>
+</body>
+</html>
