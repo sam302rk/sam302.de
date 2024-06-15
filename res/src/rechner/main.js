@@ -1,0 +1,2 @@
+document.getElementById('footer').innerHTML =
+    `<article>Copyright © ${new Date().getFullYear()} <a href="/" data-tooltip="Hej, I'm Sam!">Sam302rk</a> — <a href="https://picocss.com/">made using picocss</a> — <a href="..">zurück</a></article>`
