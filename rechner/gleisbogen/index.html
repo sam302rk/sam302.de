@@ -5,9 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="color-scheme" content="light dark" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.classless.indigo.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.colors.min.css"/>
+    <link rel="stylesheet" href="/res/rechner.css">
     <title>Gleisbogenrechner</title>
 </head>
-<body>
+<body class="gleisbogen">
     <header>
         <h1>Gleisbogenrechner</h1>
         <h4>Berechnung der Höchstgeschwindigkeit, Gleisabstand und Kurvenüberhöhung eines Gleisbogens</h4>
@@ -31,13 +33,13 @@
                 <article>
                     <label for="S"><b>Spurweite</b><p id="S_descr">\( S = 1435mm \)</p></label>
                     <input type="number" id="S" value="1435">
-        
+
                     <label for="u_f"><b>Überhöhungsfehlbetrag</b><p id="u_f_descr">\( u_f = 130mm \)</p></label>
                     <input type="number" id="u_f" value="130">
-        
+
                     <label for="d"><b>Gleisabstand</b><p id="d_descr">\( d = 4m \)</p></label>
                     <input type="number" id="d" value="4">
-                    
+
                     <label for="d_fd"><b>Höhe des Fahrdrahts</b><p id="d_fd_descr">\( d_{fd} = 5.65m \)</p></label>
                     <input type="number" id="d_fd" value="5.65">
                 </article>
@@ -48,19 +50,23 @@
         <article>
             <h4>Ergebnisse</h4>
             
-            <div>
+            <div class="out_group" data-key="d_h" data-tooltip="Klicke um den Wert zu kopieren.">
                 <b>Höhenunterschied zum Nachbargleis (y-Achse)</b>
-                <p id="d_h_descr">\( d_h = 83.9 mm \)</p>
+                <p id="d_h_descr" class="out">\( d_h = 83.9 mm \)</p>
             </div>
 
-            <div>
+            <br>
+
+            <div class="out_group" data-key="d_fdv" data-tooltip="Klicke um den Wert zu kopieren.">
                 <b>Versatz der Oberleitung (x-Achse)</b>
-                <p id="d_fdv_descr">\( d_{fdv} = 0 m \)</p>
+                <p id="d_fdv_descr" class="out">\( d_{fdv} = 0 m \)</p>
             </div>
 
-            <div>
+            <br>
+
+            <div class="out_group" data-key="V_max" data-tooltip="Klicke um den Wert zu kopieren.">
                 <b>Höchstgeschwindigkeit</b>
-                <p id="V_max_descr">\( V_{max} = 20 km/h \)</p>
+                <p id="V_max_descr" class="out">\( V_{max} = 20 km/h \)</p>
             </div>
         </article>
 

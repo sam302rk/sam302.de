@@ -1,0 +1,23 @@
+body.gleisbogen {
+    div.out_group {
+        border-color: #655cd6;
+        border-radius: 10px;
+        border-style: dashed;
+        border-width: 2px;
+        width: fit-content;
+        padding: 0em 1em;
+        padding-top: .75em;
+
+        * {
+            user-select: none;
+        }
+    }
+
+    div.out_group:hover {
+        border-color: #776cfc;
+    }
+
+    div.out_group:active {
+        border-style: solid;
+    }
+}
