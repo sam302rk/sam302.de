@@ -8,4 +8,7 @@ function getScrollPercent() {
 }
 
 // Twemoji integration
-twemoji.parse(document.body, {ext: '.svg', size: 'svg'})
+twemoji.parse(document.body, {
+        ext: '.svg', size: 'svg',
+        base: '/res/emojis/'
+    })
