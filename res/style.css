@@ -1,5 +1,9 @@
-@import url('https://unpkg.com/@catppuccin/palette/css/catppuccin.css');
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
+@import url('/res/catppuccin.css');
+
+@font-face {
+    font-family: FuraCodeRegularMono;
+    src: url("/res/fonts/Fura Code Regular Nerd Font Complete Mono Windows Compatible.ttf");
+}
 
 html {
     scroll-behavior: smooth;
@@ -8,7 +12,7 @@ html {
 body {
     background-color: var(--ctp-mocha-crust);
     color: var(--ctp-mocha-text);
-    font-family: 'FiraCode Nerd Font Mono', 'Roboto Mono', monospace;
+    font-family: 'FiraCode Nerd Font Mono', FuraCodeRegularMono, monospace;
     overflow-x: hidden;
     margin: 0 0;
     
