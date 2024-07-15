@@ -133,10 +133,15 @@ a:active {
 }
 
 blockquote {
-    font-size: smaller;
     color: var(--ctp-mocha-overlay3);
     border-left: 3px solid var(--ctp-mocha-surface0);
-    background-color: rgba(30, 30, 46, .4);  /* Mocha base */
+    background-color: var(--ctp-mocha-base);  /* Mocha base */
+    padding: .25em .25em .25em .5em ;
+    margin: .5em 0;
+
+    p {
+        margin: 0px;
+    }
 }
 
 #navbar button {
@@ -218,4 +223,87 @@ blockquote {
 a.title {
     font-weight: 600;
     color: var(--ctp-mocha-lavender);
+}
+
+code {
+    background-color: var(--ctp-mocha-mantle);
+    border: 1px solid var(--ctp-mocha-crust);
+    border-radius: 6px;
+    padding: .1em .4em;
+}
+
+pre {
+    code {
+        background-color: unset;
+        border: unset;
+        border-radius: unset;
+        padding: unset;
+    }
+
+    background-color: var(--ctp-mocha-mantle);
+    border: 1px solid var(--ctp-mocha-crust);
+    border-radius: 6px;
+    padding: .4em .4em;
+    overflow-x: scroll;
+
+    table {
+        font-size: 16px;
+        width: 100%;
+
+        tr {
+            td.line {
+                text-align: right;
+                border: none;
+                padding-right: .4em;
+                user-select: none;
+                width: min-content;
+            }
+        }
+
+        tr:hover {
+            td.line {
+                color: var(--ctp-mocha-lavender);
+            }
+
+            td.code {
+                background-color: rgb(from var(--ctp-mocha-lavender) r g b / 5%);
+            }
+        }
+    }
+}
+
+div#arwin {
+    div#article {
+        p, blockquote {
+            font-size: 20pt;
+        }
+        
+        h1 {
+            font-size: 35.25pt;
+        }
+        
+        h2 {
+            font-size: 27.75pt;
+        }
+        
+        h3 {
+            font-size: 23.5pt;
+        }
+
+        h4 {
+            font-size: 21.75pt;
+        }
+
+        h5 {
+            font-size: 20pt;
+        }
+
+        h6 {
+            font-size: 18pt;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            margin: .75em 0em;
+        }
+    }
 }

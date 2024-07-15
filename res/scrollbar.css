@@ -1,0 +1,29 @@
+/* Firefox */
+* {
+    scrollbar-width: thin;
+    scrollbar-color: var(--ctp-mocha-lavender) #00000000;
+    /* Set the thumb and track colors */
+    background-clip: padding-box;
+    /* Remove the background */
+}
+
+/* Webkit & Blink */
+*::-webkit-scrollbar {
+    width: 6px;
+    background-color: #00000000;
+    background-clip: padding-box;
+    /* Remove the background */
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: var(--ctp-mocha-lavender);
+}
+
+*::-webkit-scrollbar-track {
+    background-color: #00000000;
+    /* Set a fallback color */
+}
+
+*::-webkit-scrollbar-track-piece {
+    background-color: #00000000;
+}
