@@ -39,7 +39,11 @@ if (params.article) {
                 
                 let td_code = document.createElement('td')
                 td_code.classList.add('code')
-                td_code.append(line)
+                td_code.innerHTML = line.innerHTML
+
+                td_code.querySelectorAll('span').forEach(span => {
+                    span.innerHTML = decodeHtml(span.innerHTML)
+                })
 
                 tr.append(td_line)
                 tr.append(td_code)

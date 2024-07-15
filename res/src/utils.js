@@ -11,4 +11,10 @@ function getScrollPercent() {
 twemoji.parse(document.body, {
         ext: '.svg', size: 'svg',
         base: '/res/emojis/'
-    })
+})
+
+function decodeHtml(html) {
+    var txt = document.createElement("textarea");
+    txt.innerHTML = html;
+    return txt.value;
+}

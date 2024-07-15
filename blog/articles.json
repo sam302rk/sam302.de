@@ -1,5 +1,11 @@
 [
     {
+        "title": "The new blog layout",
+        "created_at": 1721078120000,
+        "descr": "I show off the new Blog design I've hacked together.",
+        "file": "blog-remaster"
+    },
+    {
         "title": "UtilityClient, the third",
         "created_at": 1690116916151,
         "descr": "An Introduction of UtilityClient and it's new generation.",

@@ -304,6 +304,12 @@ div#arwin {
 
         h1, h2, h3, h4, h5, h6 {
             margin: .75em 0em;
+            margin-top: 2em;
+            user-select: none;
+        }
+
+        h1:hover, h2:hover, h3:hover, h4:hover, h5:hover, h6:hover {
+            color: var(--ctp-mocha-lavender);
         }
     }
 }
