@@ -16,8 +16,15 @@ for (let lang in i18n) if(lang.toString().includes(selectedLanguage)) selectedLa
 async function replacePlaceholders(inputString) {
     return await inputString.replace(/%\S*%/g, match => {
         const query = match.replace(/%/g, '')
-        return ((typeof i18n !== 'undefined') ? i18n[selectedLanguage][query] : null) || constants[query] || params[query] || match
+        return getLocalizedString(query, selectedLanguage, 0) || constants[query] || params[query] || match
     }) 
+}
+
+function getLocalizedString(query, language, idx) {
+    if (idx == 2) return undefined
+    if (!i18n[selectedLanguage]) return getLocalizedString(query, 'en-US', idx+1)
+    if (!i18n[selectedLanguage][query]) return getLocalizedString(query, 'en-US', idx+1)
+    return i18n[selectedLanguage][query]
 }
 
 for (const node of document.getElementsByClassName('const')) {
