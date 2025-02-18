@@ -1,0 +1,4 @@
+[submodule "res/bahnbetrieb"]
+	path = res/bahnbetrieb
+	url = git@github.com:sam302rk/bahnbetrieb-resources
+	branch = main
