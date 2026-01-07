@@ -1,0 +1,15 @@
+body {
+    margin: 0px;
+    padding: 0px;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #11111b;
+}
+
+p#text {
+    color: #cdd6f4;
+    font-family: sans-serif;
+}
