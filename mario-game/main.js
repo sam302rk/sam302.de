@@ -8,13 +8,23 @@ const CellStates = {
     ANY_CLICKED: 'any_clicked'
 }
 
-fetch('config.json').then(async resp => {
-    if (!resp.ok) return
-    let config = JSON.parse(await resp.text())
+if (window.location.search !== "") {
+    let data = atob(window.location.search.slice(1))
+    console.log(data)
+    let config = JSON.parse(data)
+    start(config)
+} else {
+    fetch('config.json').then(async resp => {
+        if (!resp.ok) return
+        let config = JSON.parse(await resp.text())
+        start(config)
+    })
+}
+
+function start(config) {
     console.table(config)
-    config.grid_size['scale'] = 128
-    await setup(config)
-})
+    setup(config).then()
+}
 
 async function draw_cell(x, y, cellState, config, context) {
     const scale = config.grid_size.scale

@@ -1,7 +1,8 @@
 {
     "grid_size": {
         "width": 5,
-        "height": 5
+        "height": 5,
+        "scale": 128
     },
     "target_amount": {
         "min": 3,

@@ -1,0 +1,15 @@
+body {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    margin: 0px;
+    flex-direction: column;
+    filter: invert(.9);
+    background-color: black;
+}
+
+body > textarea {
+    flex-grow: 1;
+    resize: none;
+    white-space: pre-wrap;
+}
