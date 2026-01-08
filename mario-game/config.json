@@ -16,6 +16,7 @@
         "none": "#14141b",
         "none_clicked": "#f38ba8",
         "target": "#f9e2af",
-        "target_clicked": "#a6e3a1"
+        "target_clicked": "#a6e3a1",
+        "any_clicked": "#cba6f7"
     }
 }

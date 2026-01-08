@@ -13,3 +13,17 @@ body > textarea {
     resize: none;
     white-space: pre-wrap;
 }
+
+.buttons {
+    display: flex;
+    flex-direction: row;
+    min-height: 2em;
+}
+
+.buttons > button#launch {
+    flex-grow: 4;
+}
+
+.buttons > button#launch_dbg {
+    flex-grow: 1;
+}

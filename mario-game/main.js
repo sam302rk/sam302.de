@@ -8,6 +8,24 @@ const CellStates = {
     ANY_CLICKED: 'any_clicked'
 }
 
+const IS_DEBUG_MODE = () => window.location.hash === '#debug'
+
+if (!IS_DEBUG_MODE()) {
+    const dbg_console_debug = console.debug
+    console.debug = (...data) => {
+        if (IS_DEBUG_MODE())
+            dbg_console_debug(...data)
+    }
+
+    const dbg_console_table = console.table
+    console.table = (tabularData, properties) => {
+        if (IS_DEBUG_MODE())
+            dbg_console_table(tabularData, properties)
+    }
+}
+
+console.warn(`Debug mode ${IS_DEBUG_MODE() ? 'enabled' : 'disabled'}!`)
+
 if (window.location.search !== "") {
     let data = atob(window.location.search.slice(1))
     console.log(data)
@@ -73,6 +91,25 @@ function check_if_value_is_in_two_arrays(value, arr1, arr2) {
     return arr1.includes(value) && arr2.includes(value)
 }
 
+function has_won(round) {
+    function _has_won(a, b) {
+        for (const _a of a) {
+            const result = b.findIndex(_b => _a.x === _b.x && _a.y === _b.y)
+            console.table({
+                x: _a.x,
+                y: _a.y,
+                is_target: result
+            })
+            if (result === -1) {
+                return false
+            }
+        }
+        return true
+    }
+
+    return _has_won(round.targets, round.clicked_cells) && _has_won(round.clicked_cells, round.targets)
+}
+
 async function setup(config) {
     const text = document.getElementById('text')
     const canvas = document.getElementById('game')
@@ -111,7 +148,7 @@ async function setup(config) {
     })
 
     await listen(canvas, context, config, async (x, y) => {
-        console.info(`on_cell_click event of ${current_screen.screen_name} called for cell (${x}|${y})`)
+        console.info(`Cell click event at screen "${current_screen.screen_name}" for cell ${x}|${y}`)
         await process_new_round(await current_screen.on_cell_click(x, y, current_round, context))
     })
     await process_draw()
@@ -159,6 +196,7 @@ async function memorize_screen(config, on_screen_change) {
 
 async function play_screen(config, on_screen_change) {
     async function decide() {
+        console.debug('decide()')
         on_screen_change(await decider_screen(config, on_screen_change))
     }
     const timeout_id = setTimeout(decide, config.timing.max_play_time)
@@ -179,15 +217,22 @@ async function play_screen(config, on_screen_change) {
         on_cell_click: async (x, y, round, context) => {
             let cell_already_clicked = round.clicked_cells.findIndex(c => c.x === x && c.y === y)
             let new_state
+
             if (cell_already_clicked !== -1) {
-                round = round.clicked_cells.splice(cell_already_clicked, 1)
+                round.clicked_cells.splice(cell_already_clicked, 1)
                 new_state = CellStates.NONE
             } else {
                 round.clicked_cells.push({ x: x, y: y })
                 new_state = CellStates.ANY_CLICKED
             }
-            
+
             await draw_cell(x, y, new_state, config, context)
+
+            if (has_won(round)) {
+                clearTimeout(timeout_id)
+                await decide()
+            }
+
             return round
         }
     }
@@ -198,11 +243,6 @@ async function decider_screen(config, on_screen_change) {
         screen_name: 'decider_screen',
         draw: async (text, canvas, context, round) => {
             console.table(round)
-            const has_won = round.clicked_cells
-                .every(a_clicked_cell => round.targets
-                    .findIndex(a_target_cell => a_clicked_cell.x === a_target_cell.x
-                        && a_clicked_cell.y === a_target_cell.y) !== -1)
-
             let cells_dbg = []
 
             for (let x = 0; x < config.grid_size.width; x++) {
@@ -235,7 +275,7 @@ async function decider_screen(config, on_screen_change) {
 
             console.table(cells_dbg)
 
-            if (has_won) {
+            if (has_won(round)) {
                 on_screen_change(await win_screen(config, on_screen_change))
             } else {
                 on_screen_change(await lose_screen(config, on_screen_change))
